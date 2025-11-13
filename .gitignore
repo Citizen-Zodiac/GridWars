@@ -1,3 +1,18 @@
+# IDE
+.idea/
+*.user
+*.sln
+*.vcxproj*
+
+# Build files
+build/
+cmake-build-*/
+*.exe
+*.out
+
+# OS
+.DS_Store
+Thumbs.db
 # Prerequisites
 *.d
 
