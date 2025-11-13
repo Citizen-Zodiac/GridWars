@@ -5,6 +5,9 @@
 #include <vector>
 
 class NumericalTicBoard : public Board<int> {
+private:
+    std::vector<int> used_numbers;
+
 public:
     NumericalTicBoard();
     bool update_board(Move<int>* move) override;
@@ -19,6 +22,7 @@ public:
     NumericalTicUI(string message, int cell_display_width) : UI<int>(message, cell_display_width) {}
     Move<int>* get_move(Player<int>* player) override;
     Player<int>* create_player(string& name, int symbol, PlayerType type) override;
+    Player<int>** setup_players() override;
 };
 
 #endif

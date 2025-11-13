@@ -4,7 +4,7 @@
 using namespace std;
 
 void show_menu() {
-    cout << "===  GRID WARS ===" << endl;
+    cout << "=== GRID WARS ===" << endl;
     cout << "1. Numerical Tic-Tac-Toe" << endl;
     cout << "2. Exit" << endl;
     cout << "Choose: ";
@@ -18,7 +18,6 @@ int main() {
         cin >> choice;
 
         if (choice == 1) {
-            // Numerical Game
             NumericalTicBoard* board = new NumericalTicBoard();
             NumericalTicUI* ui = new NumericalTicUI("Numerical Tic-Tac-Toe", 3);
             Player<int>** players = ui->setup_players();
@@ -27,19 +26,16 @@ int main() {
 
             // Cleanup
             delete board;
-            for (int i = 0; i < 2; ++i) {
-                delete players[i];
-            }
+            for (int i = 0; i < 2; ++i) delete players[i];
             delete[] players;
             delete ui;
         }
         else if (choice != 2) {
-            cout << "Invalid choice! Please try again." << endl;
+            cout << "Invalid choice!" << endl;
         }
 
-        cout << endl;
     } while (choice != 2);
 
-    cout << "Thanks for playing! Goodbye!" << endl;
+    cout << "Goodbye!" << endl;
     return 0;
 }
