@@ -234,7 +234,7 @@ Move<char>* SUS_UI::get_move(Player<char>* player) {
 
 			cin.clear();
 			cin.ignore(numeric_limits<streamsize>::max(), '\n');
-			cout << "Invalid input. Please enter row (0-4) and column (0-4): ";
+			cout << "Invalid input. Please enter row (0-2) and column (0-2): ";
 			check = false;
 			cin >> x >> y;
 		}
@@ -260,7 +260,7 @@ Move<char>* SUS_UI::get_move(Player<char>* player) {
 
 				cin.clear();
 				cin.ignore(numeric_limits<streamsize>::max(), '\n');
-				cout << "Invalid input. Please enter row (0-4) and column (0,4): ";
+				cout << "Invalid input. Please enter row (0-2) and column (0,2): ";
 				double_check = false;
 				cin >> x >> y;
 			}
