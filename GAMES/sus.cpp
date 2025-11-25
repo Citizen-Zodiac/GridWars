@@ -156,8 +156,8 @@ Player<char>** SUS_UI::setup_players() {
 		cout << "Enter Player 2 name (U): ";
 		cin >> name2;
 
-		players_sus[0] = create_player(name1, 1, PlayerType::HUMAN);
-		players_sus[1] = create_player(name2, 2, PlayerType::HUMAN);
+		players_sus[0] = create_player(name1, 'S', PlayerType::HUMAN);
+		players_sus[1] = create_player(name2, 'U', PlayerType::HUMAN);
 	}
 	else {
 		// Human vs Computer 
@@ -170,27 +170,27 @@ Player<char>** SUS_UI::setup_players() {
 		cout << "Enter your name: ";
 		cin >> name;
 
-		int human_symbol, computer_symbol;
-		string human_role, computer_role;
+		char human_symbol, computer_symbol;
+		int human_role, computer_role;
 
 		if (side_choice == 1) {
-			human_symbol = 1;
-			computer_symbol = 2;
-			human_role = " S";
-			computer_role = " U";
+			human_symbol = 'S';
+			computer_symbol = 'U';
+			human_role = 1;
+			computer_role = 2;
 		}
 		else {
-			human_symbol = 2;
-			computer_symbol = 1;
-			human_role = " U";
-			computer_role = " S";
+			human_symbol = 'U';
+			computer_symbol = 'S';
+			human_role = 2;
+			computer_role = 1;
 		}
 
-		string human_name = name + human_role;
-		string computer_name = "Computer" + computer_role;
+		string human_name = name;
+		string computer_name = "Computer" ;
 
-		players_sus[human_symbol - 1] = create_player(human_name, human_symbol, PlayerType::HUMAN);
-		players_sus[computer_symbol - 1] = create_player(computer_name, computer_symbol, PlayerType::COMPUTER);
+		players_sus[human_role - 1] = create_player(human_name, human_symbol, PlayerType::HUMAN);
+		players_sus[computer_role - 1] = create_player(computer_name, computer_symbol, PlayerType::COMPUTER);
 	}
 
 	return players_sus;

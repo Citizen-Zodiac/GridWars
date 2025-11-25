@@ -157,8 +157,8 @@ Player<char>** XO_5_UI::setup_players() {
 		cout << "Enter Player 2 name (O): ";
 		cin >> name2;
 
-		players[0] = create_player(name1, 1, PlayerType::HUMAN);
-		players[1] = create_player(name2, 2, PlayerType::HUMAN);
+		players[0] = create_player(name1, 'X', PlayerType::HUMAN);
+		players[1] = create_player(name2, 'O', PlayerType::HUMAN);
 	}
 	else {
 		// Human vs Computer 
@@ -171,27 +171,27 @@ Player<char>** XO_5_UI::setup_players() {
 		cout << "Enter your name: ";
 		cin >> name;
 
-		int human_symbol, computer_symbol;
-		string human_role, computer_role;
+		char human_symbol, computer_symbol;
+		int human_role, computer_role;
 
 		if (side_choice == 1) {
-			human_symbol = 1;
-			computer_symbol = 2;
-			human_role = " X";
-			computer_role = " O";
+			human_symbol = 'X';
+			computer_symbol = 'O';
+			human_role = 1;
+			computer_role = 2;
 		}
 		else {
-			human_symbol = 2;
-			computer_symbol = 1;
-			human_role = " O";
-			computer_role = " X";
+			human_symbol = 'O';
+			computer_symbol = 'X';
+			human_role = 2;
+			computer_role = 1;
 		}
 
-		string human_name = name + human_role;
-		string computer_name = "Computer" + computer_role;
+		string human_name = name;
+		string computer_name = "Computer";
 
-		players[human_symbol-1] = create_player(human_name, human_symbol, PlayerType::HUMAN);
-		players[computer_symbol-1] = create_player(computer_name, computer_symbol, PlayerType::COMPUTER);
+		players[human_role-1] = create_player(human_name, human_symbol, PlayerType::HUMAN);
+		players[computer_role-1] = create_player(computer_name, computer_symbol, PlayerType::COMPUTER);
 	}
 
 	return players;
@@ -202,6 +202,7 @@ XO_5_UI::XO_5_UI() : UI<char>("Welcome to 5x5 X-O!", 3) {}
 Move<char>* XO_5_UI::get_move(Player<char>* player) {
 	int x, y;
 	bool check = false;
+	cout << player->get_symbol() << endl;
 	int m=xV.size();
 
 	if (player->get_type() == PlayerType::HUMAN)
