@@ -124,7 +124,17 @@ Move<int>* NumericalTicUI::get_move(Player<int>* player) {
         int x, y, number;
         cout << player->get_name() << ", enter your move (row column number): ";
         cin >> x >> y >> number;
+        while(cin.fail() || x < 0 || x >= 3 || y < 0 || y >= 3 ||
+               (player->get_symbol() == 1 && (number < 1 || number > 9 || number % 2 == 0)) ||
+               (player->get_symbol() == 2 && (number < 2 || number > 8 || number % 2 != 0))) {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cout << "Invalid input. Please enter row (0-2), column (0-2), and a valid number: ";
+            cin >> x >> y >> number;
+		}
+
         return new Move<int>(x, y, number);
+
     }
 }
 
