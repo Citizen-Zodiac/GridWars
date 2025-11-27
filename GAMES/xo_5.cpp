@@ -73,41 +73,41 @@ bool XO_5_Board::is_win(Player<char>* player) {
 			{
 
 				if (player == players[0])
-					count1_columns.insert({j,i});
+					count1_columns.insert({ j,i });
 				else if (player == players[1])
-					count2_columns.insert({j,i});
+					count2_columns.insert({ j,i });
 
 			}
 		}
-		
+
 	}
 	// Check diagonals for 3 in a row
 	for (int i = 0; i < 3; ++i) {
-		for (int j = 0; j <3; ++j) {
-			if (board[i][j] == mark && board[i + 1][j +1] == mark && board[i + 2][j + 2] == mark)
+		for (int j = 0; j < 3; ++j) {
+			if (board[i][j] == mark && board[i + 1][j + 1] == mark && board[i + 2][j + 2] == mark)
 			{
 				if (player == players[0])
-					count1_diags.insert({i,j});
+					count1_diags.insert({ i,j });
 				else if (player == players[1])
-					count2_diags.insert({i,j});
+					count2_diags.insert({ i,j });
 			}
 			if (board[i][j + 2] == mark && board[i + 1][j + 1] == mark && board[i + 2][j] == mark)
 			{
 				if (player == players[0])
-					count1_diags.insert({i,j+2});
+					count1_diags.insert({ i,j + 2 });
 				else if (player == players[1])
-					count2_diags.insert({i,j+2});
+					count2_diags.insert({ i,j + 2 });
 			}
 		}
 	}
 	if (moves_XO_5 == MAX_MOVES_XO_5)
 	{
-		cout << players[0]->get_name()<<": " << count1_rows.size() + count1_columns.size() + count1_diags.size() 
-			<<endl <<players[1]->get_name()<<": "<<
-			count2_rows.size() + count2_columns.size() + count2_diags.size()<<endl;
-		
+		cout << players[0]->get_name() << ": " << count1_rows.size() + count1_columns.size() + count1_diags.size()
+			<< endl << players[1]->get_name() << ": " <<
+			count2_rows.size() + count2_columns.size() + count2_diags.size() << endl;
 
-		if(count2_rows.size() + count2_columns.size() + count2_diags.size()>
+
+		if (count2_rows.size() + count2_columns.size() + count2_diags.size() >
 			count1_rows.size() + count1_columns.size() + count1_diags.size())
 		{
 			return true;
@@ -115,11 +115,11 @@ bool XO_5_Board::is_win(Player<char>* player) {
 
 	}
 	return false;
-	
+
 }
 
 bool XO_5_Board::is_lose(Player<char>* player) {
-	if(moves_XO_5 == MAX_MOVES_XO_5)
+	if (moves_XO_5 == MAX_MOVES_XO_5)
 
 	{
 		if (count1_rows.size() + count1_columns.size() + count1_diags.size() >
@@ -191,8 +191,8 @@ Player<char>** XO_5_UI::setup_players() {
 		string human_name = name;
 		string computer_name = "Computer";
 
-		players[human_role-1] = create_player(human_name, human_symbol, PlayerType::HUMAN);
-		players[computer_role-1] = create_player(computer_name, computer_symbol, PlayerType::COMPUTER);
+		players[human_role - 1] = create_player(human_name, human_symbol, PlayerType::HUMAN);
+		players[computer_role - 1] = create_player(computer_name, computer_symbol, PlayerType::COMPUTER);
 	}
 
 	return players;
@@ -204,7 +204,7 @@ Move<char>* XO_5_UI::get_move(Player<char>* player) {
 	int x, y;
 	bool check = false;
 	cout << player->get_symbol() << endl;
-	int m=xV.size();
+	int m = xV.size();
 
 	if (player->get_type() == PlayerType::HUMAN)
 	{
@@ -276,8 +276,8 @@ Move<char>* XO_5_UI::get_move(Player<char>* player) {
 	else if (player->get_type() == PlayerType::COMPUTER) {
 		x = rand() % player->get_board_ptr()->get_rows();
 		y = rand() % player->get_board_ptr()->get_columns();
-		
-	
+
+
 		for (int i = 0; i < m; i++)
 		{
 			if (get_x_move(i) == x && get_y_move(i) == y)

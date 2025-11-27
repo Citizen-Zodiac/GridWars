@@ -4,6 +4,7 @@
 #include "games/xo_5.h"
 #include "games/sus.h"
 #include "games/obstacles_xo.h"
+#include "games/Misere.h"
 #include "games/tic_4x4.h"
 using namespace std;
 
@@ -12,8 +13,8 @@ void show_menu() {
     cout << "1. Numerical (Tic-Tac-Toe)" << endl;
     cout << "2. 5x5 X-O (5x5 Tic-Tac-Toe)" << endl;
     cout << "3. SUS" << endl;
-    cout << "4. Obstacles X-O"<<endl;
-
+    cout << "4. Obstacles X-O" << endl;
+    cout << "5. Mis�re Tic Tac Toe" << endl;
     cout<<"6. 4x4 X-0 (4x4 Tic-Tac-Toe)"<<endl;
     cout << "0. Exit" << endl;
     cout << "Choose: ";
@@ -83,6 +84,24 @@ int main() {
             delete ui;
 
         }
+        else if (choice == 5)
+        {
+            MisereBoard* board = new MisereBoard();
+            MisereUI* ui = new MisereUI();
+
+            Player<char>** players = ui->setup_players();
+
+            GameManager<char> game(board, players, ui);
+            game.run();
+
+            // Cleanup
+            delete board;
+            for (int i = 0; i < 2; ++i) delete players[i];
+            delete[] players;
+            delete ui;
+
+        }
+
         else if (choice == 6) {
             tic_4x4_Board* board = new tic_4x4_Board();
             tic_4x4_UI* ui = new tic_4x4_UI();

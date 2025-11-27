@@ -55,11 +55,11 @@ bool Obstacles_XO_Board::is_win(Player<char>* player) {
 	// Check rows and columns for 3 in a row
 	for (int i = 0; i < 6; ++i) {
 		for (int j = 0; j < 3; ++j) {
-			if (board[i][j] == mark && board[i][j + 1] == mark && board[i][j + 2] == mark&& board[i][j+3]==mark)
+			if (board[i][j] == mark && board[i][j + 1] == mark && board[i][j + 2] == mark && board[i][j + 3] == mark)
 			{
 				return true;
 			}
-			if (board[j][i] == mark && board[j + 1][i] == mark && board[j + 2][i] == mark&&board[j+3][i]==mark)
+			if (board[j][i] == mark && board[j + 1][i] == mark && board[j + 2][i] == mark && board[j + 3][i] == mark)
 			{
 				return true;
 			}
@@ -69,17 +69,17 @@ bool Obstacles_XO_Board::is_win(Player<char>* player) {
 	// Check diagonals for 3 in a row
 	for (int i = 0; i < 3; ++i) {
 		for (int j = 0; j < 3; ++j) {
-			if (board[i][j] == mark && board[i + 1][j + 1] == mark && board[i + 2][j + 2] == mark&&board[i+3][j+3]==mark)
+			if (board[i][j] == mark && board[i + 1][j + 1] == mark && board[i + 2][j + 2] == mark && board[i + 3][j + 3] == mark)
 			{
 				return true;
 			}
-			if (board[i][j + 3] == mark && board[i + 1][j + 2] == mark && board[i + 2][j+1] == mark&&board[i+3][j]==mark)
+			if (board[i][j + 3] == mark && board[i + 1][j + 2] == mark && board[i + 2][j + 1] == mark && board[i + 3][j] == mark)
 			{
 				return true;
 			}
 		}
 	}
-	
+
 	return false;
 
 }
@@ -160,7 +160,7 @@ Obstacles_XO_UI::Obstacles_XO_UI() : UI<char>("Welcome to Obstacles X-O!", 3) {}
 Move<char>* Obstacles_XO_UI::get_move(Player<char>* player) {
 	int x, y;
 	bool check = false;
-	cout <<player->get_name()<<": "<< player->get_symbol() << endl;
+	cout << player->get_name() << ": " << player->get_symbol() << endl;
 	int m = xV_obs.size();
 
 	if (player->get_type() == PlayerType::HUMAN)
@@ -294,7 +294,7 @@ Move<char>* Obstacles_XO_UI::get_move(Player<char>* player) {
 	if (rounds_obstacles == 2)
 	{
 		check = false;
-		int l, k,w,z;
+		int l, k, w, z;
 		m = xV_obs.size();
 
 		l = rand() % player->get_board_ptr()->get_rows();
@@ -352,7 +352,7 @@ Move<char>* Obstacles_XO_UI::get_move(Player<char>* player) {
 			}
 
 		}
-	
+
 		record_move_obs(l, k);
 
 		m = xV_obs.size();

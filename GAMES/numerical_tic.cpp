@@ -180,7 +180,8 @@ Player<int>** NumericalTicUI::setup_players() {
             computer_symbol = 2;
             human_role = " (Odds)";
             computer_role = " (Evens)";
-        } else {
+        }
+        else {
             human_symbol = 2;
             computer_symbol = 1;
             human_role = " (Evens)";

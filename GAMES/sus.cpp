@@ -63,18 +63,18 @@ bool SUS_Board::is_win(Player<char>* player) {
 			if (board[i][j] == players_sus[0]->get_symbol() && board[i][j + 1] == players_sus[1]->get_symbol() && board[i][j + 2] == players_sus[0]->get_symbol())
 			{
 
-				if (player == players_sus[0]&& count2_rows_sus.find({i,j}) == count2_rows_sus.end())
+				if (player == players_sus[0] && count2_rows_sus.find({ i,j }) == count2_rows_sus.end())
 					count1_rows_sus.insert({ i,j });
-				else if (player == players_sus[1] && count1_rows_sus.find({i,j})== count1_rows_sus.end())
+				else if (player == players_sus[1] && count1_rows_sus.find({ i,j }) == count1_rows_sus.end())
 					count2_rows_sus.insert({ i,j });
 
 			}
 			if (board[j][i] == players_sus[0]->get_symbol() && board[j + 1][i] == players_sus[1]->get_symbol() && board[j + 2][i] == players_sus[0]->get_symbol())
 			{
 
-				if (player == players_sus[0] && count2_columns_sus.find({j,i})==count2_columns_sus.end())
+				if (player == players_sus[0] && count2_columns_sus.find({ j,i }) == count2_columns_sus.end())
 					count1_columns_sus.insert({ j,i });
-				else if (player == players_sus[1]&&count1_columns_sus.find({j,i})==count1_columns_sus.end())
+				else if (player == players_sus[1] && count1_columns_sus.find({ j,i }) == count1_columns_sus.end())
 					count2_columns_sus.insert({ j,i });
 
 			}
@@ -88,14 +88,14 @@ bool SUS_Board::is_win(Player<char>* player) {
 			{
 				if (player == players_sus[0] && count2_diags_sus.find({ i,j }) == count2_diags_sus.end())
 					count1_diags_sus.insert({ i,j });
-				else if (player == players_sus[1] && count1_diags_sus.find({i,j}) == count1_diags_sus.end())
+				else if (player == players_sus[1] && count1_diags_sus.find({ i,j }) == count1_diags_sus.end())
 					count2_diags_sus.insert({ i,j });
 			}
 			if (board[i][j + 2] == players_sus[0]->get_symbol() && board[i + 1][j + 1] == players_sus[1]->get_symbol() && board[i + 2][j] == players_sus[0]->get_symbol())
 			{
-				if (player == players_sus[0]&& count2_diags_sus.find({i,j+2}) == count2_diags_sus.end())
+				if (player == players_sus[0] && count2_diags_sus.find({ i,j + 2 }) == count2_diags_sus.end())
 					count1_diags_sus.insert({ i,j + 2 });
-				else if (player == players_sus[1]&& count1_diags_sus.find({i,j+2}) == count1_diags_sus.end())
+				else if (player == players_sus[1] && count1_diags_sus.find({ i,j + 2 }) == count1_diags_sus.end())
 					count2_diags_sus.insert({ i,j + 2 });
 			}
 		}
@@ -189,7 +189,7 @@ Player<char>** SUS_UI::setup_players() {
 		}
 
 		string human_name = name;
-		string computer_name = "Computer" ;
+		string computer_name = "Computer";
 
 		players_sus[human_role - 1] = create_player(human_name, human_symbol, PlayerType::HUMAN);
 		players_sus[computer_role - 1] = create_player(computer_name, computer_symbol, PlayerType::COMPUTER);
@@ -219,7 +219,7 @@ Move<char>* SUS_UI::get_move(Player<char>* player) {
 				break;
 			}
 		}
-		while (cin.fail() || x < 0 || x >= 3 || y < 0 || y >=3 || check)
+		while (cin.fail() || x < 0 || x >= 3 || y < 0 || y >= 3 || check)
 		{
 
 			if (!check)
