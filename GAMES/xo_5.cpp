@@ -2,6 +2,7 @@
 #include <iomanip>
 #include <cctype>  // for toupper()
 #include "xo_5.h"
+#include<limits>
 
 using namespace std;
 

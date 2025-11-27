@@ -2,6 +2,7 @@
 #include <iomanip>
 #include <cctype>  // for toupper()
 #include "obstacles_xo.h"
+#include<limits>
 
 using namespace std;
 
