@@ -1,13 +1,11 @@
-#include "Misere_UI.h"
+#include "Misere.h"
 #include <cstdlib>
 #include <ctime>
 #include <iostream>
 #include <limits>
 using namespace std;
 
-// -------------------------------------------------------------
-// RandomMiserePlayer Implementation
-// -------------------------------------------------------------
+
 RandomMiserePlayer::RandomMiserePlayer(string name, char symbol)
     : Player<char>(name, symbol, PlayerType::COMPUTER)
 {
@@ -30,9 +28,7 @@ Move<char>* RandomMiserePlayer::get_random_move() {
     return new Move<char>(choice.first, choice.second, this->symbol);
 }
 
-// -------------------------------------------------------------
-// MisereBoard Implementation
-// -------------------------------------------------------------
+
 MisereBoard::MisereBoard() : Board<char>(3, 3) {
     for (int i = 0; i < 3; i++)
         for (int j = 0; j < 3; j++)
@@ -83,9 +79,7 @@ bool MisereBoard::game_is_over(Player<char>* p) {
     return is_win(p) || is_lose(p) || is_draw(p);
 }
 
-// -------------------------------------------------------------
-// MisereUI Implementation
-// -------------------------------------------------------------
+
 MisereUI::MisereUI()
     : UI<char>("Welcome to Misere Tic Tac Toe!", 3) {}
 
@@ -118,6 +112,3 @@ Player<char>* MisereUI::create_player(string& name, char symbol, PlayerType type
     else
         return new Player<char>(name, symbol, PlayerType::HUMAN);
 }
-
-
-    

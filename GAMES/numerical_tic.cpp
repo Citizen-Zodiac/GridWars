@@ -1,33 +1,18 @@
 #include "numerical_tic.h"
 #include <iostream>
 #include <cstdlib>
+#include <ctime>
+#include <algorithm>
 
 using namespace std;
 
-// Helper functions for random numbers
-int get_random_odd() {
-    int odds[] = {1, 3, 5, 7, 9};
-    return odds[rand() % 5];
-}
-
-int get_random_even() {
-    int evens[] = {2, 4, 6, 8};
-    return evens[rand() % 4];
-}
-
-// Computer Player Class
-class NumericalComputerPlayer : public Player<int> {
-public:
-    NumericalComputerPlayer(string name, int symbol) : Player<int>(name, symbol, PlayerType::COMPUTER) {}
-};
-
-// NumericalTicBoard Implementation
 NumericalTicBoard::NumericalTicBoard() : Board(3, 3) {
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
             board[i][j] = 0;
         }
     }
+    srand(time(0));
 }
 
 bool NumericalTicBoard::update_board(Move<int>* move) {
@@ -38,36 +23,46 @@ bool NumericalTicBoard::update_board(Move<int>* move) {
     if (x < 0 || x >= 3 || y < 0 || y >= 3) return false;
     if (board[x][y] != 0) return false;
 
+    if (find(used_numbers.begin(), used_numbers.end(), number) != used_numbers.end()) {
+        return false;
+    }
+
     board[x][y] = number;
     n_moves++;
+    used_numbers.push_back(number);
     return true;
 }
 
 bool NumericalTicBoard::is_win(Player<int>* player) {
     int target = 15;
 
-    // Check rows
+    // Check rows - three consecutive cells in a row
     for (int i = 0; i < 3; i++) {
-        if (board[i][0] + board[i][1] + board[i][2] == target &&
-            board[i][0] != 0 && board[i][1] != 0 && board[i][2] != 0)
+        int row_sum = board[i][0] + board[i][1] + board[i][2];
+        if (row_sum == target && board[i][0] != 0 && board[i][1] != 0 && board[i][2] != 0) {
             return true;
+        }
     }
 
-    // Check columns
+    // Check columns - three consecutive cells in a column
     for (int j = 0; j < 3; j++) {
-        if (board[0][j] + board[1][j] + board[2][j] == target &&
-            board[0][j] != 0 && board[1][j] != 0 && board[2][j] != 0)
+        int col_sum = board[0][j] + board[1][j] + board[2][j];
+        if (col_sum == target && board[0][j] != 0 && board[1][j] != 0 && board[2][j] != 0) {
             return true;
+        }
     }
 
-    // Check diagonals
-    if (board[0][0] + board[1][1] + board[2][2] == target &&
-        board[0][0] != 0 && board[1][1] != 0 && board[2][2] != 0)
+    // Check main diagonal - three consecutive cells
+    int diag1_sum = board[0][0] + board[1][1] + board[2][2];
+    if (diag1_sum == target && board[0][0] != 0 && board[1][1] != 0 && board[2][2] != 0) {
         return true;
+    }
 
-    if (board[0][2] + board[1][1] + board[2][0] == target &&
-        board[0][2] != 0 && board[1][1] != 0 && board[2][0] != 0)
+    // Check anti-diagonal - three consecutive cells
+    int diag2_sum = board[0][2] + board[1][1] + board[2][0];
+    if (diag2_sum == target && board[0][2] != 0 && board[1][1] != 0 && board[2][0] != 0) {
         return true;
+    }
 
     return false;
 }
@@ -84,41 +79,121 @@ bool NumericalTicBoard::game_is_over(Player<int>* player) {
     return is_win(player) || is_draw(player);
 }
 
-// NumericalTic UI Implementation
 Move<int>* NumericalTicUI::get_move(Player<int>* player) {
     if (player->get_type() == PlayerType::COMPUTER) {
-        // Computer player - make random move
-        cout << player->get_name() << " (Computer) is thinking..." << endl;
-        // Find empty cell
-        int x, y;
-        do {
-            x = rand() % 3;
-            y = rand() % 3;
-        } while (player->get_board_ptr()->get_board_matrix()[x][y] != 0);
+        NumericalTicBoard* board = dynamic_cast<NumericalTicBoard*>(player->get_board_ptr());
 
-        // Get appropriate number based on player symbol
-        int number;
-        if (player->get_symbol() == 1) {
-            number = get_random_odd();
-        } else {
-            number = get_random_even();
+        // Keep trying random moves until valid
+        int attempts = 0;
+        while (attempts < 100) {
+            int x = rand() % 3;
+            int y = rand() % 3;
+            int number;
+
+            if (player->get_symbol() == 1) {
+                number = (rand() % 5) * 2 + 1; // 1,3,5,7,9
+            }
+            else {
+                number = (rand() % 4) * 2 + 2; // 2,4,6,8
+            }
+
+            // Test if this move would be valid
+            if (board->get_board_matrix()[x][y] == 0) {
+                bool number_used = false;
+                auto board_state = board->get_board_matrix();
+                for (int i = 0; i < 3; i++) {
+                    for (int j = 0; j < 3; j++) {
+                        if (board_state[i][j] == number) {
+                            number_used = true;
+                            break;
+                        }
+                    }
+                    if (number_used) break;
+                }
+
+                if (!number_used) {
+                    cout << player->get_name() << " plays: " << x << " " << y << " " << number << endl;
+                    return new Move<int>(x, y, number);
+                }
+            }
+            attempts++;
         }
 
-        cout << "Computer plays at (" << x << ", " << y << ") with number " << number << endl;
-        return new Move<int>(x, y, number);
+        return new Move<int>(0, 0, player->get_symbol() == 1 ? 1 : 2);
     }
     else {
-        // Human player
         int x, y, number;
-        cout << player->get_name() << ", Enter your move (row column number): ";
+        cout << player->get_name() << ", enter your move (row column number): ";
         cin >> x >> y >> number;
+        while (cin.fail() || x < 0 || x >= 3 || y < 0 || y >= 3 ||
+            (player->get_symbol() == 1 && (number < 1 || number > 9 || number % 2 == 0)) ||
+            (player->get_symbol() == 2 && (number < 2 || number > 8 || number % 2 != 0))) {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cout << "Invalid input. Please enter row (0-2), column (0-2), and a valid number: ";
+            cin >> x >> y >> number;
+        }
+
         return new Move<int>(x, y, number);
+
     }
 }
 
 Player<int>* NumericalTicUI::create_player(string& name, int symbol, PlayerType type) {
-    if (type == PlayerType::COMPUTER) {
-        return new NumericalComputerPlayer(name, symbol);
-    }
     return new Player<int>(name, symbol, type);
+}
+
+Player<int>** NumericalTicUI::setup_players() {
+    Player<int>** players = new Player<int>*[2];
+    int game_mode;
+
+    cout << "Choose game mode:\n1. Human vs Human\n2. Human vs Computer\nChoose: ";
+    cin >> game_mode;
+
+    if (game_mode == 1) {
+        // Human vs Human
+        string name1, name2;
+        cout << "Enter Player 1 name (Odds): ";
+        cin >> name1;
+        cout << "Enter Player 2 name (Evens): ";
+        cin >> name2;
+
+        players[0] = create_player(name1, 1, PlayerType::HUMAN);
+        players[1] = create_player(name2, 2, PlayerType::HUMAN);
+    }
+    else {
+        // Human vs Computer - WITH ODD/EVEN CHOICE
+        string name;
+        int side_choice;
+
+        cout << "Choose your side:\n1. Odds (1,3,5,7,9)\n2. Evens (2,4,6,8)\nChoose: ";
+        cin >> side_choice;
+
+        cout << "Enter your name: ";
+        cin >> name;
+
+        int human_symbol, computer_symbol;
+        string human_role, computer_role;
+
+        if (side_choice == 1) {
+            human_symbol = 1;
+            computer_symbol = 2;
+            human_role = " (Odds)";
+            computer_role = " (Evens)";
+        }
+        else {
+            human_symbol = 2;
+            computer_symbol = 1;
+            human_role = " (Evens)";
+            computer_role = " (Odds)";
+        }
+
+        string human_name = name + human_role;
+        string computer_name = "Computer" + computer_role;
+
+        players[0] = create_player(human_name, human_symbol, PlayerType::HUMAN);
+        players[1] = create_player(computer_name, computer_symbol, PlayerType::COMPUTER);
+    }
+
+    return players;
 }
