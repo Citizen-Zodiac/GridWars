@@ -7,6 +7,7 @@
 #include "games/Misere.h"
 #include "games/Diamond.h"
 #include "games/Infinity.h"
+#include "games/Ultimate.h"
 using namespace std;
 
 void show_menu() {
@@ -18,6 +19,7 @@ void show_menu() {
     cout << "5. Misère (Tic Tac Toe)" << endl;
     cout << "6. Diamond (Tic-Tac-Toe)" << endl;
     cout << "7. Infinity (Tic-Tac-Toe)" << endl;
+    cout << "8. Ultimate (Tic-Tac-Toe)" << endl;
     cout << "0. Exit" << endl;
     cout << "Choose: ";
 }
@@ -135,8 +137,26 @@ int main() {
             delete[] players;
             delete ui;
         }
+        else if (choice == 8)
+        {
+            Ultimate_MainBoard* board = new Ultimate_MainBoard();
+            Ultimate_UI* ui = new Ultimate_UI();
 
-        else if (choice != 1 || choice != 2 || choice != 3 || choice != 4 || choice != 5 ||  choice != 6 ||  choice != 7 || choice != 0) {
+            Player<char>** players = ui->setup_players();
+
+            Ultimate_GameManager game(board, players, ui);
+            game.run();
+
+            // cleanup 
+            delete players[0];
+            delete players[1];
+            delete[] players;
+            delete board;
+            delete ui;
+
+            }
+
+        else if (choice != 1 || choice != 2 || choice != 3 || choice != 4 || choice != 5 ||  choice != 6 ||  choice != 7 || choice != 8 || choice != 0) {
             cout << "Invalid choice. Please try again." << endl;
         }
 
