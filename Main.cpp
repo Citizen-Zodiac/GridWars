@@ -5,6 +5,7 @@
 #include "games/sus.h"
 #include "games/obstacles_xo.h"
 #include "games/Misere.h"
+#include "games/Diamond.h"
 using namespace std;
 
 void show_menu() {
@@ -14,6 +15,7 @@ void show_menu() {
     cout << "3. SUS" << endl;
     cout << "4. Obstacles X-O" << endl;
     cout << "5. Misère Tic Tac Toe" << endl;
+    cout << "6. Diamond (Tic-Tac-Toe)" << endl;
     cout << "0. Exit" << endl;
     cout << "Choose: ";
 }
@@ -99,8 +101,25 @@ int main() {
             delete ui;
 
         }
+        else if (choice == 6)
+        {
+            Diamond_Board* board = new Diamond_Board();
+            Diamond_UI* ui = new Diamond_UI();
 
-        else if (choice != 1 || choice != 2 || choice != 3 || choice != 4 || choice != 5 || choice != 0) {
+            Player<char>** players = ui->setup_players();
+
+            GameManager<char> game(board, players, ui);
+            game.run();
+
+            // Cleanup
+            delete board;
+            for (int i = 0; i < 2; ++i) delete players[i];
+            delete[] players;
+            delete ui;
+
+        }
+
+        else if (choice != 1 || choice != 2 || choice != 3 || choice != 4 || choice != 5 ||  choice != 6 || choice != 0) {
             cout << "Invalid choice. Please try again." << endl;
         }
 
