@@ -9,6 +9,10 @@
 #include"games/word_tic.h"
 #include "games/connect_four.h"
 #include "games/memory_xo.h"
+#include"GAMES/Diamond.h"
+#include"GAMES/Infinity.h"
+#include "GAMES/pyramid_tictactoe.h"
+#include "GAMES/Ultimate.h"
 using namespace std;
 
 void show_menu() {
@@ -22,6 +26,10 @@ void show_menu() {
     cout << "7. Word (Tic-Tac-Toe)"<<endl;
     cout << "8. Connect Four (Tic-Tac-Toe)" << endl;
 	cout << "9. Memory X-O (Tic-Tac-Toe with Memory)" << endl;
+	cout << "10. Diamond Tic-Tac-Toe" << endl;
+	cout << "11. Infinity Tic-Tac-Toe" << endl;
+	cout << "12. Pyramid Tic-Tac-Toe" << endl;
+	cout << "13. Ultimate Tic-Tac-Toe" << endl;
     cout << "0. Exit" << endl;
     cout << "Choose: ";
 }
@@ -169,7 +177,60 @@ int main() {
             delete[] players;
             delete ui;
 		}
-        else if (choice != 1 || choice != 2 || choice != 3 || choice!=4|| choice!=5||choice!=6||choice!=7|| choice!=8|| choice!=9|| choice != 0) {
+        else if(choice==10)
+        {
+            Diamond_Board* board = new Diamond_Board();
+            Diamond_UI* ui = new Diamond_UI();
+            Player<char>** players = ui->setup_players();
+            GameManager<char> game(board, players, ui);
+            game.run();
+            // Cleanup
+            delete board;
+            for (int i = 0; i < 2; ++i) delete players[i];
+            delete[] players;
+            delete ui;
+        }
+        else if(choice==11)
+        {
+            Infinity_Board* board = new Infinity_Board();
+            Infinity_UI* ui = new Infinity_UI();
+            Player<char>** players = ui->setup_players();
+            GameManager<char> game(board, players, ui);
+            game.run();
+            // Cleanup
+            delete board;
+            for (int i = 0; i < 2; ++i) delete players[i];
+            delete[] players;
+            delete ui;
+		}
+        else if(choice==12)
+        {
+            PyramidTicTacToeBoard* board = new PyramidTicTacToeBoard();
+            PyramidTicTacToeUI* ui = new PyramidTicTacToeUI();
+            Player<char>** players = ui->setup_players();
+            GameManager<char> game(board, players, ui);
+            game.run();
+            // Cleanup
+            delete board;
+            for (int i = 0; i < 2; ++i) delete players[i];
+            delete[] players;
+			delete ui;
+            }
+        else if(choice==13)
+        {
+            Ultimate_MainBoard* board = new Ultimate_MainBoard();
+            Ultimate_UI* ui = new Ultimate_UI();
+            Player<char>** players = ui->setup_players();
+			Ultimate_GameManager game(board, players, ui);
+            game.run();
+            // Cleanup
+            delete board;
+            for (int i = 0; i < 2; ++i) delete players[i];
+            delete[] players;
+			delete ui;
+		}
+
+        else if (choice != 1 || choice != 2 || choice != 3 || choice!=4|| choice!=5||choice!=6||choice!=7|| choice!=8|| choice!=9||choice!=10 ||choice!=11 ||choice!=12 ||choice!=13 || choice != 0) {
             cout << "Invalid choice. Please try again." << endl;
         }
 
