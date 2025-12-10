@@ -52,7 +52,7 @@ bool Obstacles_XO_Board::update_board(Move<char>* move) {
 
 bool Obstacles_XO_Board::is_win(Player<char>* player) {
 	char mark = toupper(player->get_symbol());
-	// Check rows and columns for 3 in a row
+	// Check rows and columns for 4 in a row
 	for (int i = 0; i < 6; ++i) {
 		for (int j = 0; j < 3; ++j) {
 			if (board[i][j] == mark && board[i][j + 1] == mark && board[i][j + 2] == mark && board[i][j + 3] == mark)
@@ -66,7 +66,7 @@ bool Obstacles_XO_Board::is_win(Player<char>* player) {
 		}
 
 	}
-	// Check diagonals for 3 in a row
+	// Check diagonals for 4 in a row
 	for (int i = 0; i < 3; ++i) {
 		for (int j = 0; j < 3; ++j) {
 			if (board[i][j] == mark && board[i + 1][j + 1] == mark && board[i + 2][j + 2] == mark && board[i + 3][j + 3] == mark)

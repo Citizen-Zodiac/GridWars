@@ -1,4 +1,4 @@
-﻿#ifndef MISERE_UI_H
+﻿  #ifndef MISERE_UI_H
 #define MISERE_UI_H
 
 #include "BoardGame_Classes.h"
