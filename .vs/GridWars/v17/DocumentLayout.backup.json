@@ -7,6 +7,14 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LOQ\\Documents\\GitHub\\GridWars\\GAMES\\Infinity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GAMES\\Infinity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LOQ\\Documents\\GitHub\\GridWars\\GAMES\\Infinity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GAMES\\Infinity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LOQ\\Documents\\GitHub\\GridWars\\GAMES\\Diamond.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GAMES\\Diamond.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -65,49 +73,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Diamond.cpp",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Documents\\GitHub\\GridWars\\GAMES\\Diamond.cpp",
-              "RelativeDocumentMoniker": "GAMES\\Diamond.cpp",
-              "ToolTip": "C:\\Users\\LOQ\\Documents\\GitHub\\GridWars\\GAMES\\Diamond.cpp",
-              "RelativeToolTip": "GAMES\\Diamond.cpp",
-              "ViewState": "AgIAAKQAAAAAAAAAAAAUwL0AAAABAAAAAAAAAA==",
+              "Title": "Infinity.cpp",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Documents\\GitHub\\GridWars\\GAMES\\Infinity.cpp",
+              "RelativeDocumentMoniker": "GAMES\\Infinity.cpp",
+              "ToolTip": "C:\\Users\\LOQ\\Documents\\GitHub\\GridWars\\GAMES\\Infinity.cpp",
+              "RelativeToolTip": "GAMES\\Infinity.cpp",
+              "ViewState": "AgIAAI4AAAAAAAAAAAAAAI4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-12-10T14:37:13.178Z",
+              "WhenOpened": "2025-12-10T15:12:39.808Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Diamond.h",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Documents\\GitHub\\GridWars\\GAMES\\Diamond.h",
-              "RelativeDocumentMoniker": "GAMES\\Diamond.h",
-              "ToolTip": "C:\\Users\\LOQ\\Documents\\GitHub\\GridWars\\GAMES\\Diamond.h",
-              "RelativeToolTip": "GAMES\\Diamond.h",
-              "ViewState": "AgIAABUAAAAAAAAAAAAUwC4AAAAAAAAAAAAAAA==",
+              "Title": "Infinity.h",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Documents\\GitHub\\GridWars\\GAMES\\Infinity.h",
+              "RelativeDocumentMoniker": "GAMES\\Infinity.h",
+              "ToolTip": "C:\\Users\\LOQ\\Documents\\GitHub\\GridWars\\GAMES\\Infinity.h",
+              "RelativeToolTip": "GAMES\\Infinity.h",
+              "ViewState": "AgIAACYAAAAAAAAAAAAUwC0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-12-10T14:36:25.615Z",
+              "WhenOpened": "2025-12-10T15:12:19.524Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "obstacles_xo.cpp",
-              "DocumentMoniker": "C:\\Users\\LOQ\\Documents\\GitHub\\GridWars\\GAMES\\obstacles_xo.cpp",
-              "RelativeDocumentMoniker": "GAMES\\obstacles_xo.cpp",
-              "ToolTip": "C:\\Users\\LOQ\\Documents\\GitHub\\GridWars\\GAMES\\obstacles_xo.cpp",
-              "RelativeToolTip": "GAMES\\obstacles_xo.cpp",
-              "ViewState": "AgIAAFQBAAAAAAAAAAAuwKgBAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-27T11:43:22.185Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "xo_5.h",
               "DocumentMoniker": "C:\\Users\\LOQ\\Documents\\GitHub\\GridWars\\GAMES\\xo_5.h",
               "RelativeDocumentMoniker": "GAMES\\xo_5.h",
@@ -119,7 +115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "sus.h",
               "DocumentMoniker": "C:\\Users\\LOQ\\Documents\\GitHub\\GridWars\\GAMES\\sus.h",
               "RelativeDocumentMoniker": "GAMES\\sus.h",
@@ -131,7 +127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "obstacles_xo.h",
               "DocumentMoniker": "C:\\Users\\LOQ\\Documents\\GitHub\\GridWars\\GAMES\\obstacles_xo.h",
               "RelativeDocumentMoniker": "GAMES\\obstacles_xo.h",
@@ -143,7 +139,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "numerical_tic.h",
               "DocumentMoniker": "C:\\Users\\LOQ\\Documents\\GitHub\\GridWars\\GAMES\\numerical_tic.h",
               "RelativeDocumentMoniker": "GAMES\\numerical_tic.h",
@@ -155,7 +151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "numerical_tic.cpp",
               "DocumentMoniker": "C:\\Users\\LOQ\\Documents\\GitHub\\GridWars\\GAMES\\numerical_tic.cpp",
               "RelativeDocumentMoniker": "GAMES\\numerical_tic.cpp",
@@ -173,14 +169,50 @@
               "RelativeDocumentMoniker": "Main.cpp",
               "ToolTip": "C:\\Users\\LOQ\\Documents\\GitHub\\GridWars\\Main.cpp",
               "RelativeToolTip": "Main.cpp",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAUwHkAAABcAAAAAAAAAA==",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAUwJAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-11-26T11:38:39.664Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Diamond.cpp",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Documents\\GitHub\\GridWars\\GAMES\\Diamond.cpp",
+              "RelativeDocumentMoniker": "GAMES\\Diamond.cpp",
+              "ToolTip": "C:\\Users\\LOQ\\Documents\\GitHub\\GridWars\\GAMES\\Diamond.cpp",
+              "RelativeToolTip": "GAMES\\Diamond.cpp",
+              "ViewState": "AgIAAKQAAAAAAAAAAAAUwL0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-12-10T14:37:13.178Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "Diamond.h",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Documents\\GitHub\\GridWars\\GAMES\\Diamond.h",
+              "RelativeDocumentMoniker": "GAMES\\Diamond.h",
+              "ToolTip": "C:\\Users\\LOQ\\Documents\\GitHub\\GridWars\\GAMES\\Diamond.h",
+              "RelativeToolTip": "GAMES\\Diamond.h",
+              "ViewState": "AgIAABUAAAAAAAAAAAAUwC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-10T14:36:25.615Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "obstacles_xo.cpp",
+              "DocumentMoniker": "C:\\Users\\LOQ\\Documents\\GitHub\\GridWars\\GAMES\\obstacles_xo.cpp",
+              "RelativeDocumentMoniker": "GAMES\\obstacles_xo.cpp",
+              "ToolTip": "C:\\Users\\LOQ\\Documents\\GitHub\\GridWars\\GAMES\\obstacles_xo.cpp",
+              "RelativeToolTip": "GAMES\\obstacles_xo.cpp",
+              "ViewState": "AgIAAFQBAAAAAAAAAAAuwKgBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-27T11:43:22.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "sus.cpp",
               "DocumentMoniker": "C:\\Users\\LOQ\\Documents\\GitHub\\GridWars\\GAMES\\sus.cpp",
               "RelativeDocumentMoniker": "GAMES\\sus.cpp",
@@ -192,7 +224,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "xo_5.cpp",
               "DocumentMoniker": "C:\\Users\\LOQ\\Documents\\GitHub\\GridWars\\GAMES\\xo_5.cpp",
               "RelativeDocumentMoniker": "GAMES\\xo_5.cpp",
@@ -204,7 +236,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "Misere_Board.cpp",
               "DocumentMoniker": "C:\\Users\\LOQ\\Documents\\GitHub\\GridWars\\GAMES\\Misere_Board.cpp",
               "RelativeDocumentMoniker": "GAMES\\Misere_Board.cpp",
@@ -216,7 +248,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Misere.h",
               "DocumentMoniker": "C:\\Users\\LOQ\\Documents\\GitHub\\GridWars\\GAMES\\Misere.h",
               "RelativeDocumentMoniker": "GAMES\\Misere.h",
@@ -228,7 +260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "CMake Overview Pages",
               "DocumentMoniker": "CMake Overview Pages",
               "ToolTip": "CMake Overview Pages",

@@ -6,6 +6,7 @@
 #include "games/obstacles_xo.h"
 #include "games/Misere.h"
 #include "games/Diamond.h"
+#include "games/Infinity.h"
 using namespace std;
 
 void show_menu() {
@@ -14,8 +15,9 @@ void show_menu() {
     cout << "2. 5x5 X-O (5x5 Tic-Tac-Toe)" << endl;
     cout << "3. SUS" << endl;
     cout << "4. Obstacles X-O" << endl;
-    cout << "5. Misère Tic Tac Toe" << endl;
+    cout << "5. Misère (Tic Tac Toe)" << endl;
     cout << "6. Diamond (Tic-Tac-Toe)" << endl;
+    cout << "7. Infinity (Tic-Tac-Toe)" << endl;
     cout << "0. Exit" << endl;
     cout << "Choose: ";
 }
@@ -116,10 +118,25 @@ int main() {
             for (int i = 0; i < 2; ++i) delete players[i];
             delete[] players;
             delete ui;
+        }
+        else if (choice == 7)
+        {
+            Infinity_Board* board = new Infinity_Board();
+            Infinity_UI* ui = new Infinity_UI();
 
+            Player<char>** players = ui->setup_players();
+            GameManager<char> game(board, players, ui);
+
+            game.run();
+
+            // Cleanup
+            delete board;
+            for (int i = 0; i < 2; ++i) delete players[i];
+            delete[] players;
+            delete ui;
         }
 
-        else if (choice != 1 || choice != 2 || choice != 3 || choice != 4 || choice != 5 ||  choice != 6 || choice != 0) {
+        else if (choice != 1 || choice != 2 || choice != 3 || choice != 4 || choice != 5 ||  choice != 6 ||  choice != 7 || choice != 0) {
             cout << "Invalid choice. Please try again." << endl;
         }
 
