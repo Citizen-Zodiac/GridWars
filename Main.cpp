@@ -63,6 +63,7 @@ void show_menu() {
  */
 int main() {
     int choice;
+    srand(time(0));  // For computer moves
 
     do {
         show_menu();
@@ -76,7 +77,6 @@ int main() {
             GameManager<int> game(board, players, ui);
             game.run();
 
-            // Cleanup
             delete board;
             for (int i = 0; i < 2; ++i) delete players[i];
             delete[] players;
@@ -154,6 +154,13 @@ int main() {
             delete[] players;
             delete ui;
         }
+        else if (choice == 7) {
+            // PYRAMID TIC-TAC-TOE
+            PyramidTicTacToeBoard* board = new PyramidTicTacToeBoard();
+            PyramidTicTacToeUI* ui = new PyramidTicTacToeUI();
+            Player<char>** players = ui->setup_players();
+            GameManager<char> game(board, players, ui);
+            game.run();
 
         // --- Word Tic-Tac-Toe ---
         else if (choice == 7) {
@@ -260,6 +267,5 @@ int main() {
 
     } while (choice != 0);
 
-    cout << "Goodbye!" << endl;
     return 0;
 }
