@@ -1,0 +1,178 @@
+\doxysection{Ultimate\+\_\+\+Main\+Board Class Reference}
+\hypertarget{class_ultimate___main_board}{}\label{class_ultimate___main_board}\index{Ultimate\_MainBoard@{Ultimate\_MainBoard}}
+
+
+Represents the main 9x9 board of Ultimate Tic-\/\+Tac-\/\+Toe.  
+
+
+
+
+{\ttfamily \#include $<$Ultimate.\+h$>$}
+
+Inheritance diagram for Ultimate\+\_\+\+Main\+Board\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_ultimate___main_board}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_ultimate___main_board_a494432d0f624ce7b4ca6d41ecb8e82c2}\label{class_ultimate___main_board_a494432d0f624ce7b4ca6d41ecb8e82c2} 
+{\bfseries Ultimate\+\_\+\+Main\+Board} ()
+\begin{DoxyCompactList}\small\item\em Default constructor initializes all sub-\/boards. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ultimate___main_board_a715943c81a28089d6dc8613c46284314}{update\+\_\+board}} (\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}move) override
+\begin{DoxyCompactList}\small\item\em Updates the main board with a move. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ultimate___main_board_a9267fada98f9bd23fcc3ced5d4b4139d}{is\+\_\+win}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}p) override
+\begin{DoxyCompactList}\small\item\em Checks if the given player has won the game. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ultimate___main_board_af4458d0278288044b7a17a073b1b9727}{is\+\_\+lose}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}p) override
+\begin{DoxyCompactList}\small\item\em Checks if the given player has lost the game. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ultimate___main_board_a32d9d2717dd9ea62e8f8f4cb463cb3ab}{is\+\_\+draw}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}p) override
+\begin{DoxyCompactList}\small\item\em Checks if the game is a draw. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ultimate___main_board_a08efdbd03cb947d0eb5ab9ea91b9bbab}{game\+\_\+is\+\_\+over}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}p) override
+\begin{DoxyCompactList}\small\item\em Checks if the game is over (win, lose, or draw). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_ultimate___sub_board}{Ultimate\+\_\+\+Sub\+Board}} \& \mbox{\hyperlink{class_ultimate___main_board_a82ecdaae97d3c73f8786f81791e6cd7c}{get\+\_\+sub}} (int r, int c)
+\begin{DoxyCompactList}\small\item\em Access a sub-\/board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Board} (int \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}, int \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})
+\begin{DoxyCompactList}\small\item\em Construct a board with given dimensions. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Board} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. Frees allocated board memory. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ {\bfseries get\+\_\+board\+\_\+matrix} () const
+\begin{DoxyCompactList}\small\item\em Return a copy of the current board as a 2D vector. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+rows} () const
+\begin{DoxyCompactList}\small\item\em Get number of rows. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+columns} () const
+\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+n\+\_\+moves} () const
+\begin{DoxyCompactList}\small\item\em Get number of moves. \end{DoxyCompactList}\item 
+char {\bfseries get\+\_\+cell} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Return content of cell x, y in current board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries rows}
+\begin{DoxyCompactList}\small\item\em Number of rows. \end{DoxyCompactList}\item 
+int {\bfseries columns}
+\begin{DoxyCompactList}\small\item\em Number of columns. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ {\bfseries board}
+\begin{DoxyCompactList}\small\item\em 2D vector for the board \end{DoxyCompactList}\item 
+int {\bfseries n\+\_\+moves}
+\begin{DoxyCompactList}\small\item\em Number of moves made. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the main 9x9 board of Ultimate Tic-\/\+Tac-\/\+Toe. 
+
+Manages 3x3 sub-\/boards and checks for overall game state, wins, draws, and losses. 
+
+\label{doc-func-members}
+\Hypertarget{class_ultimate___main_board_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ultimate___main_board_a08efdbd03cb947d0eb5ab9ea91b9bbab}\index{Ultimate\_MainBoard@{Ultimate\_MainBoard}!game\_is\_over@{game\_is\_over}}
+\index{game\_is\_over@{game\_is\_over}!Ultimate\_MainBoard@{Ultimate\_MainBoard}}
+\doxysubsubsection{\texorpdfstring{game\_is\_over()}{game\_is\_over()}}
+{\footnotesize\ttfamily \label{class_ultimate___main_board_a08efdbd03cb947d0eb5ab9ea91b9bbab} 
+bool Ultimate\+\_\+\+Main\+Board\+::game\+\_\+is\+\_\+over (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{p}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the game is over (win, lose, or draw). 
+
+
+
+Implements \mbox{\hyperlink{class_board_ae0e4575ec3cc4b6eb9f367ffb2beed13}{Board$<$ char $>$}}.
+
+\Hypertarget{class_ultimate___main_board_a82ecdaae97d3c73f8786f81791e6cd7c}\index{Ultimate\_MainBoard@{Ultimate\_MainBoard}!get\_sub@{get\_sub}}
+\index{get\_sub@{get\_sub}!Ultimate\_MainBoard@{Ultimate\_MainBoard}}
+\doxysubsubsection{\texorpdfstring{get\_sub()}{get\_sub()}}
+{\footnotesize\ttfamily \label{class_ultimate___main_board_a82ecdaae97d3c73f8786f81791e6cd7c} 
+\mbox{\hyperlink{class_ultimate___sub_board}{Ultimate\+\_\+\+Sub\+Board}} \& Ultimate\+\_\+\+Main\+Board\+::get\+\_\+sub (\begin{DoxyParamCaption}\item[{int}]{r}{, }\item[{int}]{c}{}\end{DoxyParamCaption})}
+
+
+
+Access a sub-\/board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Row index of sub-\/board (0-\/2) \\
+\hline
+{\em c} & Column index of sub-\/board (0-\/2) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the sub-\/board 
+\end{DoxyReturn}
+\Hypertarget{class_ultimate___main_board_a32d9d2717dd9ea62e8f8f4cb463cb3ab}\index{Ultimate\_MainBoard@{Ultimate\_MainBoard}!is\_draw@{is\_draw}}
+\index{is\_draw@{is\_draw}!Ultimate\_MainBoard@{Ultimate\_MainBoard}}
+\doxysubsubsection{\texorpdfstring{is\_draw()}{is\_draw()}}
+{\footnotesize\ttfamily \label{class_ultimate___main_board_a32d9d2717dd9ea62e8f8f4cb463cb3ab} 
+bool Ultimate\+\_\+\+Main\+Board\+::is\+\_\+draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{p}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the game is a draw. 
+
+
+
+Implements \mbox{\hyperlink{class_board_a8dbe2a243881986f3e53b45799d377fc}{Board$<$ char $>$}}.
+
+\Hypertarget{class_ultimate___main_board_af4458d0278288044b7a17a073b1b9727}\index{Ultimate\_MainBoard@{Ultimate\_MainBoard}!is\_lose@{is\_lose}}
+\index{is\_lose@{is\_lose}!Ultimate\_MainBoard@{Ultimate\_MainBoard}}
+\doxysubsubsection{\texorpdfstring{is\_lose()}{is\_lose()}}
+{\footnotesize\ttfamily \label{class_ultimate___main_board_af4458d0278288044b7a17a073b1b9727} 
+bool Ultimate\+\_\+\+Main\+Board\+::is\+\_\+lose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{p}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the given player has lost the game. 
+
+
+
+Implements \mbox{\hyperlink{class_board_a207d5f6feb77f81c51d1462f0245890d}{Board$<$ char $>$}}.
+
+\Hypertarget{class_ultimate___main_board_a9267fada98f9bd23fcc3ced5d4b4139d}\index{Ultimate\_MainBoard@{Ultimate\_MainBoard}!is\_win@{is\_win}}
+\index{is\_win@{is\_win}!Ultimate\_MainBoard@{Ultimate\_MainBoard}}
+\doxysubsubsection{\texorpdfstring{is\_win()}{is\_win()}}
+{\footnotesize\ttfamily \label{class_ultimate___main_board_a9267fada98f9bd23fcc3ced5d4b4139d} 
+bool Ultimate\+\_\+\+Main\+Board\+::is\+\_\+win (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{p}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the given player has won the game. 
+
+
+
+Implements \mbox{\hyperlink{class_board_ab316fe3e79677b4617fc3d90d6c48f33}{Board$<$ char $>$}}.
+
+\Hypertarget{class_ultimate___main_board_a715943c81a28089d6dc8613c46284314}\index{Ultimate\_MainBoard@{Ultimate\_MainBoard}!update\_board@{update\_board}}
+\index{update\_board@{update\_board}!Ultimate\_MainBoard@{Ultimate\_MainBoard}}
+\doxysubsubsection{\texorpdfstring{update\_board()}{update\_board()}}
+{\footnotesize\ttfamily \label{class_ultimate___main_board_a715943c81a28089d6dc8613c46284314} 
+bool Ultimate\+\_\+\+Main\+Board\+::update\+\_\+board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{move}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the main board with a move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & Pointer to the \doxylink{class_move}{Move} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the move was successful 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a93d9dec601dda58b7e206ccb47633e57}{Board$<$ char $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Ultimate.\+h\item 
+Ultimate.\+cpp\end{DoxyCompactItemize}

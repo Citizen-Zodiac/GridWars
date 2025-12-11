@@ -1,0 +1,160 @@
+\doxysection{Ultimate\+\_\+\+UI Class Reference}
+\hypertarget{class_ultimate___u_i}{}\label{class_ultimate___u_i}\index{Ultimate\_UI@{Ultimate\_UI}}
+
+
+Handles user interaction for Ultimate Tic-\/\+Tac-\/\+Toe.  
+
+
+
+
+{\ttfamily \#include $<$Ultimate.\+h$>$}
+
+Inheritance diagram for Ultimate\+\_\+\+UI\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_ultimate___u_i}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_ultimate___u_i_a9e3b3b9207e382ffc43d8e34bcb34ce0}\label{class_ultimate___u_i_a9e3b3b9207e382ffc43d8e34bcb34ce0} 
+{\bfseries Ultimate\+\_\+\+UI} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_ultimate___u_i_ac0abfef045d4caf1c0c309ef200ef2fb}{get\+\_\+move}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}p) override
+\begin{DoxyCompactList}\small\item\em Gets a move from a player. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_ultimate___u_i_a8b7c8b09278cdef5dc878ef89eaa83e7}{create\+\_\+player}} (string \&name, char symbol, Player\+Type type) override
+\begin{DoxyCompactList}\small\item\em Creates a player. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ultimate___u_i_ab5a19e43341695f4f8c5c67fd8d6b861}{display\+\_\+ultimate\+\_\+board}} (\mbox{\hyperlink{class_ultimate___main_board}{Ultimate\+\_\+\+Main\+Board}} \texorpdfstring{$\ast$}{*}board)
+\begin{DoxyCompactList}\small\item\em Displays the full main board including all sub-\/boards. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_ultimate___u_i_ab8e086219852ccec5b75ef804dfb83c9}{show\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Shows the menu options to the player. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_ultimate___u_i_a08473160c79e0349368ac3f065a26d67}{setup\+\_\+players}} ()
+\begin{DoxyCompactList}\small\item\em Sets up the two players. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries UI} (int cell\+\_\+display\+\_\+width=3)
+\begin{DoxyCompactList}\small\item\em Construct the \doxylink{class_u_i}{UI} and display a welcome message. \end{DoxyCompactList}\item 
+virtual void {\bfseries display\+\_\+message} (string message)
+\begin{DoxyCompactList}\small\item\em Display any message to the user. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_i_a94561e0bb4bbcbe5ff71ca6d751922df}{create\+\_\+player}} (string \&name, char symbol, Player\+Type type)
+\begin{DoxyCompactList}\small\item\em Create a player object based on input name, symbol, and type. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_u_i_aa3775124efaeac59935ae0afb354708d}{display\+\_\+board\+\_\+matrix}} (const vector$<$ vector$<$ char $>$ $>$ \&matrix) const
+\begin{DoxyCompactList}\small\item\em Display the current board matrix in formatted form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual string {\bfseries get\+\_\+player\+\_\+name} (string player\+\_\+label)
+\begin{DoxyCompactList}\small\item\em Ask the user for the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+virtual Player\+Type {\bfseries get\+\_\+player\+\_\+type\+\_\+choice} (string player\+\_\+label, const vector$<$ string $>$ \&options)
+\begin{DoxyCompactList}\small\item\em Ask the user to choose the player type from a list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries cell\+\_\+width}
+\begin{DoxyCompactList}\small\item\em Width of each displayed board cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles user interaction for Ultimate Tic-\/\+Tac-\/\+Toe. 
+
+\label{doc-func-members}
+\Hypertarget{class_ultimate___u_i_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ultimate___u_i_a8b7c8b09278cdef5dc878ef89eaa83e7}\index{Ultimate\_UI@{Ultimate\_UI}!create\_player@{create\_player}}
+\index{create\_player@{create\_player}!Ultimate\_UI@{Ultimate\_UI}}
+\doxysubsubsection{\texorpdfstring{create\_player()}{create\_player()}}
+{\footnotesize\ttfamily \label{class_ultimate___u_i_a8b7c8b09278cdef5dc878ef89eaa83e7} 
+\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Ultimate\+\_\+\+UI\+::create\+\_\+player (\begin{DoxyParamCaption}\item[{string \&}]{name}{, }\item[{char}]{symbol}{, }\item[{Player\+Type}]{type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Creates a player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{class_player}{Player}\textquotesingle{}s name \\
+\hline
+{\em symbol} & \doxylink{class_player}{Player}\textquotesingle{}s symbol \\
+\hline
+{\em type} & \doxylink{class_player}{Player} type (human or computer) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the created player 
+\end{DoxyReturn}
+\Hypertarget{class_ultimate___u_i_ab5a19e43341695f4f8c5c67fd8d6b861}\index{Ultimate\_UI@{Ultimate\_UI}!display\_ultimate\_board@{display\_ultimate\_board}}
+\index{display\_ultimate\_board@{display\_ultimate\_board}!Ultimate\_UI@{Ultimate\_UI}}
+\doxysubsubsection{\texorpdfstring{display\_ultimate\_board()}{display\_ultimate\_board()}}
+{\footnotesize\ttfamily \label{class_ultimate___u_i_ab5a19e43341695f4f8c5c67fd8d6b861} 
+void Ultimate\+\_\+\+UI\+::display\+\_\+ultimate\+\_\+board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ultimate___main_board}{Ultimate\+\_\+\+Main\+Board}} \texorpdfstring{$\ast$}{*}}]{board}{}\end{DoxyParamCaption})}
+
+
+
+Displays the full main board including all sub-\/boards. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & Pointer to the \doxylink{class_ultimate___main_board}{Ultimate\+\_\+\+Main\+Board} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_ultimate___u_i_ac0abfef045d4caf1c0c309ef200ef2fb}\index{Ultimate\_UI@{Ultimate\_UI}!get\_move@{get\_move}}
+\index{get\_move@{get\_move}!Ultimate\_UI@{Ultimate\_UI}}
+\doxysubsubsection{\texorpdfstring{get\_move()}{get\_move()}}
+{\footnotesize\ttfamily \label{class_ultimate___u_i_ac0abfef045d4caf1c0c309ef200ef2fb} 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Ultimate\+\_\+\+UI\+::get\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{p}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets a move from a player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Pointer to the player \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the \doxylink{class_move}{Move} object 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_u_i_a8befa259c38c57e6ae2e8ed81c476337}{UI$<$ char $>$}}.
+
+\Hypertarget{class_ultimate___u_i_a08473160c79e0349368ac3f065a26d67}\index{Ultimate\_UI@{Ultimate\_UI}!setup\_players@{setup\_players}}
+\index{setup\_players@{setup\_players}!Ultimate\_UI@{Ultimate\_UI}}
+\doxysubsubsection{\texorpdfstring{setup\_players()}{setup\_players()}}
+{\footnotesize\ttfamily \label{class_ultimate___u_i_a08473160c79e0349368ac3f065a26d67} 
+\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} Ultimate\+\_\+\+UI\+::setup\+\_\+players (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets up the two players. 
+
+\begin{DoxyReturn}{Returns}
+Array of two \doxylink{class_player}{Player} pointers 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{UI$<$ char $>$}}.
+
+\Hypertarget{class_ultimate___u_i_ab8e086219852ccec5b75ef804dfb83c9}\index{Ultimate\_UI@{Ultimate\_UI}!show\_menu@{show\_menu}}
+\index{show\_menu@{show\_menu}!Ultimate\_UI@{Ultimate\_UI}}
+\doxysubsubsection{\texorpdfstring{show\_menu()}{show\_menu()}}
+{\footnotesize\ttfamily \label{class_ultimate___u_i_ab8e086219852ccec5b75ef804dfb83c9} 
+int Ultimate\+\_\+\+UI\+::show\+\_\+menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Shows the menu options to the player. 
+
+\begin{DoxyReturn}{Returns}
+The selected menu option 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Ultimate.\+h\item 
+Ultimate.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,151 @@
+\doxysection{tic\+\_\+4x4\+\_\+\+Board Class Reference}
+\hypertarget{classtic__4x4___board}{}\label{classtic__4x4___board}\index{tic\_4x4\_Board@{tic\_4x4\_Board}}
+Inheritance diagram for tic\+\_\+4x4\+\_\+\+Board\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtic__4x4___board}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classtic__4x4___board_ab71bb41a0ea0799fa3353f7842a01b1a}{update\+\_\+board}} (\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}move) override
+\begin{DoxyCompactList}\small\item\em Update the board with a new move. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtic__4x4___board_a3810cc6685abf0121e1876234549cbaa}{is\+\_\+win}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Check if a player has won. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtic__4x4___board_a699c2f03ab722a154c44afde20a4e484}{is\+\_\+lose}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Check if a player has lost. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtic__4x4___board_a89f5994a14a5a146fad4ab622b5c88db}{is\+\_\+draw}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Check if the game ended in a draw. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtic__4x4___board_aa7cddcca4b9ea7acc361aa33d17653bb}{game\+\_\+is\+\_\+over}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Check if the game is over. \end{DoxyCompactList}\item 
+\Hypertarget{classtic__4x4___board_af98e2b57e40b4169e8eb1ef9d12339cc}\label{classtic__4x4___board_af98e2b57e40b4169e8eb1ef9d12339cc} 
+bool {\bfseries move\+\_\+token} (int fromX, int fromY, int toX, int toY, char symbol)
+\item 
+\Hypertarget{classtic__4x4___board_a58003a77ef63d299080be181b781f03d}\label{classtic__4x4___board_a58003a77ef63d299080be181b781f03d} 
+bool {\bfseries is\+\_\+valid\+\_\+move} (int fromX, int fromY, int toX, int toY, char symbol) const
+\item 
+\Hypertarget{classtic__4x4___board_a89c84af2d6647377b2f40c882e575d1a}\label{classtic__4x4___board_a89c84af2d6647377b2f40c882e575d1a} 
+void {\bfseries switch\+\_\+player} ()
+\item 
+\Hypertarget{classtic__4x4___board_aa123f27377206245af5e33dedcf61238}\label{classtic__4x4___board_aa123f27377206245af5e33dedcf61238} 
+char {\bfseries get\+\_\+current\+\_\+player} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Board} (int \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}, int \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})
+\begin{DoxyCompactList}\small\item\em Construct a board with given dimensions. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Board} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. Frees allocated board memory. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ {\bfseries get\+\_\+board\+\_\+matrix} () const
+\begin{DoxyCompactList}\small\item\em Return a copy of the current board as a 2D vector. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+rows} () const
+\begin{DoxyCompactList}\small\item\em Get number of rows. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+columns} () const
+\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+n\+\_\+moves} () const
+\begin{DoxyCompactList}\small\item\em Get number of moves. \end{DoxyCompactList}\item 
+char {\bfseries get\+\_\+cell} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Return content of cell x, y in current board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries rows}
+\begin{DoxyCompactList}\small\item\em Number of rows. \end{DoxyCompactList}\item 
+int {\bfseries columns}
+\begin{DoxyCompactList}\small\item\em Number of columns. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ {\bfseries board}
+\begin{DoxyCompactList}\small\item\em 2D vector for the board \end{DoxyCompactList}\item 
+int {\bfseries n\+\_\+moves}
+\begin{DoxyCompactList}\small\item\em Number of moves made. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{classtic__4x4___board_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classtic__4x4___board_aa7cddcca4b9ea7acc361aa33d17653bb}\index{tic\_4x4\_Board@{tic\_4x4\_Board}!game\_is\_over@{game\_is\_over}}
+\index{game\_is\_over@{game\_is\_over}!tic\_4x4\_Board@{tic\_4x4\_Board}}
+\doxysubsubsection{\texorpdfstring{game\_is\_over()}{game\_is\_over()}}
+{\footnotesize\ttfamily \label{classtic__4x4___board_aa7cddcca4b9ea7acc361aa33d17653bb} 
+bool tic\+\_\+4x4\+\_\+\+Board\+::game\+\_\+is\+\_\+over (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if the game is over. 
+
+
+
+Implements \mbox{\hyperlink{class_board_ae0e4575ec3cc4b6eb9f367ffb2beed13}{Board$<$ char $>$}}.
+
+\Hypertarget{classtic__4x4___board_a89f5994a14a5a146fad4ab622b5c88db}\index{tic\_4x4\_Board@{tic\_4x4\_Board}!is\_draw@{is\_draw}}
+\index{is\_draw@{is\_draw}!tic\_4x4\_Board@{tic\_4x4\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_draw()}{is\_draw()}}
+{\footnotesize\ttfamily \label{classtic__4x4___board_a89f5994a14a5a146fad4ab622b5c88db} 
+bool tic\+\_\+4x4\+\_\+\+Board\+::is\+\_\+draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if the game ended in a draw. 
+
+
+
+Implements \mbox{\hyperlink{class_board_a8dbe2a243881986f3e53b45799d377fc}{Board$<$ char $>$}}.
+
+\Hypertarget{classtic__4x4___board_a699c2f03ab722a154c44afde20a4e484}\index{tic\_4x4\_Board@{tic\_4x4\_Board}!is\_lose@{is\_lose}}
+\index{is\_lose@{is\_lose}!tic\_4x4\_Board@{tic\_4x4\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_lose()}{is\_lose()}}
+{\footnotesize\ttfamily \label{classtic__4x4___board_a699c2f03ab722a154c44afde20a4e484} 
+bool tic\+\_\+4x4\+\_\+\+Board\+::is\+\_\+lose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if a player has lost. 
+
+
+
+Implements \mbox{\hyperlink{class_board_a207d5f6feb77f81c51d1462f0245890d}{Board$<$ char $>$}}.
+
+\Hypertarget{classtic__4x4___board_a3810cc6685abf0121e1876234549cbaa}\index{tic\_4x4\_Board@{tic\_4x4\_Board}!is\_win@{is\_win}}
+\index{is\_win@{is\_win}!tic\_4x4\_Board@{tic\_4x4\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_win()}{is\_win()}}
+{\footnotesize\ttfamily \label{classtic__4x4___board_a3810cc6685abf0121e1876234549cbaa} 
+bool tic\+\_\+4x4\+\_\+\+Board\+::is\+\_\+win (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if a player has won. 
+
+
+
+Implements \mbox{\hyperlink{class_board_ab316fe3e79677b4617fc3d90d6c48f33}{Board$<$ char $>$}}.
+
+\Hypertarget{classtic__4x4___board_ab71bb41a0ea0799fa3353f7842a01b1a}\index{tic\_4x4\_Board@{tic\_4x4\_Board}!update\_board@{update\_board}}
+\index{update\_board@{update\_board}!tic\_4x4\_Board@{tic\_4x4\_Board}}
+\doxysubsubsection{\texorpdfstring{update\_board()}{update\_board()}}
+{\footnotesize\ttfamily \label{classtic__4x4___board_ab71bb41a0ea0799fa3353f7842a01b1a} 
+bool tic\+\_\+4x4\+\_\+\+Board\+::update\+\_\+board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{move}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Update the board with a new move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & The move object containing position and symbol. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the move is valid and applied, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a93d9dec601dda58b7e206ccb47633e57}{Board$<$ char $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{tic__4x4_8h}{tic\+\_\+4x4.\+h}}\item 
+tic\+\_\+4x4.\+cpp\end{DoxyCompactItemize}

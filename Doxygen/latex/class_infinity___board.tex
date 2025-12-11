@@ -1,0 +1,188 @@
+\doxysection{Infinity\+\_\+\+Board Class Reference}
+\hypertarget{class_infinity___board}{}\label{class_infinity___board}\index{Infinity\_Board@{Infinity\_Board}}
+
+
+Specialized board class for the Infinity game.  
+
+
+
+
+{\ttfamily \#include $<$Infinity.\+h$>$}
+
+Inheritance diagram for Infinity\+\_\+\+Board\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_infinity___board}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_infinity___board_a70c26a8f29d4d3ba36e948e7b2400a5d}\label{class_infinity___board_a70c26a8f29d4d3ba36e948e7b2400a5d} 
+{\bfseries Infinity\+\_\+\+Board} ()
+\begin{DoxyCompactList}\small\item\em Default constructor initializing Infinity board settings. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_infinity___board_a73168748decfd8a3bfa9044409d728aa}{update\+\_\+board}} (\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}move) override
+\begin{DoxyCompactList}\small\item\em Updates the board with a new move. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_infinity___board_a3d7bfd3c82d1997c6749d11923ff26bb}{is\+\_\+win}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}p) override
+\begin{DoxyCompactList}\small\item\em Checks whether the given player has won the game. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_infinity___board_a01a4beee9bc39dacca3090f1829e5ded}{is\+\_\+lose}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}p) override
+\begin{DoxyCompactList}\small\item\em Checks if the player has lost the game. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_infinity___board_a6ea4d1ab2f743c678d19b886d8ac6351}{is\+\_\+draw}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}p) override
+\begin{DoxyCompactList}\small\item\em Determines if the game ended in a draw. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_infinity___board_a06f63830918dcdef1c246bc98d7156e3}{game\+\_\+is\+\_\+over}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}p) override
+\begin{DoxyCompactList}\small\item\em Checks whether the game is over for the given player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Board} (int \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}, int \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})
+\begin{DoxyCompactList}\small\item\em Construct a board with given dimensions. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Board} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. Frees allocated board memory. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ {\bfseries get\+\_\+board\+\_\+matrix} () const
+\begin{DoxyCompactList}\small\item\em Return a copy of the current board as a 2D vector. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+rows} () const
+\begin{DoxyCompactList}\small\item\em Get number of rows. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+columns} () const
+\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+n\+\_\+moves} () const
+\begin{DoxyCompactList}\small\item\em Get number of moves. \end{DoxyCompactList}\item 
+char {\bfseries get\+\_\+cell} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Return content of cell x, y in current board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries rows}
+\begin{DoxyCompactList}\small\item\em Number of rows. \end{DoxyCompactList}\item 
+int {\bfseries columns}
+\begin{DoxyCompactList}\small\item\em Number of columns. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ {\bfseries board}
+\begin{DoxyCompactList}\small\item\em 2D vector for the board \end{DoxyCompactList}\item 
+int {\bfseries n\+\_\+moves}
+\begin{DoxyCompactList}\small\item\em Number of moves made. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Specialized board class for the Infinity game. 
+
+Handles move validation, win checking, and game progression. 
+
+\label{doc-func-members}
+\Hypertarget{class_infinity___board_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_infinity___board_a06f63830918dcdef1c246bc98d7156e3}\index{Infinity\_Board@{Infinity\_Board}!game\_is\_over@{game\_is\_over}}
+\index{game\_is\_over@{game\_is\_over}!Infinity\_Board@{Infinity\_Board}}
+\doxysubsubsection{\texorpdfstring{game\_is\_over()}{game\_is\_over()}}
+{\footnotesize\ttfamily \label{class_infinity___board_a06f63830918dcdef1c246bc98d7156e3} 
+bool Infinity\+\_\+\+Board\+::game\+\_\+is\+\_\+over (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{p}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks whether the game is over for the given player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Pointer to the player being checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if win or draw conditions are met. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_ae0e4575ec3cc4b6eb9f367ffb2beed13}{Board$<$ char $>$}}.
+
+\Hypertarget{class_infinity___board_a6ea4d1ab2f743c678d19b886d8ac6351}\index{Infinity\_Board@{Infinity\_Board}!is\_draw@{is\_draw}}
+\index{is\_draw@{is\_draw}!Infinity\_Board@{Infinity\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_draw()}{is\_draw()}}
+{\footnotesize\ttfamily \label{class_infinity___board_a6ea4d1ab2f743c678d19b886d8ac6351} 
+bool Infinity\+\_\+\+Board\+::is\+\_\+draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{p}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Determines if the game ended in a draw. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Pointer to the player (not used directly). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the board is full and no one has won. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a8dbe2a243881986f3e53b45799d377fc}{Board$<$ char $>$}}.
+
+\Hypertarget{class_infinity___board_a01a4beee9bc39dacca3090f1829e5ded}\index{Infinity\_Board@{Infinity\_Board}!is\_lose@{is\_lose}}
+\index{is\_lose@{is\_lose}!Infinity\_Board@{Infinity\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_lose()}{is\_lose()}}
+{\footnotesize\ttfamily \label{class_infinity___board_a01a4beee9bc39dacca3090f1829e5ded} 
+bool Infinity\+\_\+\+Board\+::is\+\_\+lose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{p}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the player has lost the game. 
+
+Always returns false because Infinity does not track losing explicitly. 
+\begin{DoxyParams}{Parameters}
+{\em p} & Pointer to the player being checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False in all cases. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a207d5f6feb77f81c51d1462f0245890d}{Board$<$ char $>$}}.
+
+\Hypertarget{class_infinity___board_a3d7bfd3c82d1997c6749d11923ff26bb}\index{Infinity\_Board@{Infinity\_Board}!is\_win@{is\_win}}
+\index{is\_win@{is\_win}!Infinity\_Board@{Infinity\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_win()}{is\_win()}}
+{\footnotesize\ttfamily \label{class_infinity___board_a3d7bfd3c82d1997c6749d11923ff26bb} 
+bool Infinity\+\_\+\+Board\+::is\+\_\+win (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{p}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks whether the given player has won the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Pointer to the player being checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the player meets the win condition. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_ab316fe3e79677b4617fc3d90d6c48f33}{Board$<$ char $>$}}.
+
+\Hypertarget{class_infinity___board_a73168748decfd8a3bfa9044409d728aa}\index{Infinity\_Board@{Infinity\_Board}!update\_board@{update\_board}}
+\index{update\_board@{update\_board}!Infinity\_Board@{Infinity\_Board}}
+\doxysubsubsection{\texorpdfstring{update\_board()}{update\_board()}}
+{\footnotesize\ttfamily \label{class_infinity___board_a73168748decfd8a3bfa9044409d728aa} 
+bool Infinity\+\_\+\+Board\+::update\+\_\+board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{move}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the board with a new move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & The move object containing the position and symbol. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the move is valid and applied, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a93d9dec601dda58b7e206ccb47633e57}{Board$<$ char $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_infinity_8h}{Infinity.\+h}}\item 
+Infinity.\+cpp\end{DoxyCompactItemize}

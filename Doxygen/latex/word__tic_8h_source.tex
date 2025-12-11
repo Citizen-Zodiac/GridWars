@@ -1,0 +1,95 @@
+\doxysection{word\+\_\+tic.\+h}
+\hypertarget{word__tic_8h_source}{}\label{word__tic_8h_source}\mbox{\hyperlink{word__tic_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ \_WORD\_TIC\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ \_WORD\_TIC\_H}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include"{}BoardGame\_Classes.h"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include<vector>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include<set>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include<unordered\_set>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include<fstream>}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00024\ \textcolor{comment}{@brief\ Vectors\ to\ record\ moves\ in\ Word\ game.}}
+\DoxyCodeLine{00025\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00026\ \textcolor{keyword}{static}\ vector<\ int>\ xV\_word;}
+\DoxyCodeLine{00027\ \textcolor{keyword}{static}\ vector<\ int>\ yV\_word;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00031\ \textcolor{comment}{@brief\ Record\ a\ move\ in\ Word\ game.}}
+\DoxyCodeLine{00032\ \textcolor{comment}{@param\ row\ The\ row\ index\ of\ the\ move.}}
+\DoxyCodeLine{00033\ \textcolor{comment}{@param\ col\ The\ column\ index\ of\ the\ move.}}
+\DoxyCodeLine{00034\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{void}\ record\_move\_four(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00038\ \textcolor{comment}{@brief\ Get\ the\ x-\/coordinate\ of\ a\ recorded\ move\ in\ Word\ game.}}
+\DoxyCodeLine{00039\ \textcolor{comment}{@param\ index\ The\ index\ of\ the\ move\ to\ retrieve.}}
+\DoxyCodeLine{00040\ \textcolor{comment}{@return\ The\ x-\/coordinate\ of\ the\ move.}}
+\DoxyCodeLine{00041\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{int}\ get\_x\_move\_four(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00043\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00044\ \textcolor{comment}{@brief\ Get\ the\ y-\/coordinate\ of\ a\ recorded\ move\ in\ Word\ game.}}
+\DoxyCodeLine{00045\ \textcolor{comment}{@param\ index\ The\ index\ of\ the\ move\ to\ retrieve.}}
+\DoxyCodeLine{00046\ \textcolor{comment}{@return\ The\ y-\/coordinate\ of\ the\ move.}}
+\DoxyCodeLine{00047\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{int}\ get\_y\_move\_four(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{static}\ unordered\_set<std::string>\ dictionary;}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00058\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{word__tic_8h_a60d3fa38c5180ca9dcb87a8a391fe224}{load\_dictionary}}();}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00065\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{word__tic_8h_ad1b177b00f118379dd26b91bb339d53e}{is\_valid\_word}}(\textcolor{keyword}{const}\ std::string\&\ w);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00071\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{word__tic_8h_a505eb4c3748a52b37db91a42dc88b799}{random\_letter}}();}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_word___board_a333451cc4551290f7cbc5fcc85c3d4dc}{Word\_Board}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}<char>\ \{}
+\DoxyCodeLine{00086\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{char}\ blank\_symbol\ =\ \textcolor{charliteral}{'.'};\ }
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00093\ \ \ \ \ \mbox{\hyperlink{class_word___board_a333451cc4551290f7cbc5fcc85c3d4dc}{Word\_Board}}();}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_word___board_a38df9f9c8ee882efe6be49caa8f49e17}{update\_board}}(\mbox{\hyperlink{class_move}{Move<char>}}*\ move)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_word___board_ae979d62a555279816687e1f7cfa0ccee}{is\_win}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_word___board_a0f959cb00d8bfa37c69930e6bf46d3ba}{is\_lose}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_word___board_a2711a5163435141ff7e87bee962306b2}{is\_draw}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_word___board_a21bcd59e08df0a5bdc8c82070e3b1cc0}{game\_is\_over}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00129\ \};}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_word___u_i_a262c4743654620571173b72f94bb2ebf}{Word\_UI}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}}<char>\ \{}
+\DoxyCodeLine{00144\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00149\ \ \ \ \ \mbox{\hyperlink{class_word___u_i_a262c4743654620571173b72f94bb2ebf}{Word\_UI}}();}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00156\ \ \ \ \ \mbox{\hyperlink{class_move}{Move<char>}}*\ \mbox{\hyperlink{class_word___u_i_af531d7f4e2ed7ac86f37fe17c2f83365}{get\_move}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00165\ \ \ \ \ \mbox{\hyperlink{class_player}{Player<char>}}*\ \mbox{\hyperlink{class_word___u_i_adf7b7a1e67e1f5fae7dbae6a44aaafc1}{create\_player}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{char}\ symbol,\ PlayerType\ type)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00168\ \textcolor{comment}{\ \ \ \ @brief\ Sets\ up\ the\ players\ for\ the\ Word\ game.}}
+\DoxyCodeLine{00169\ \textcolor{comment}{\ \ \ \ @return\ An\ array\ of\ pointers\ to\ the\ created\ Player<char>\ instances.}}
+\DoxyCodeLine{00170\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00171\ \ \ \ \ \mbox{\hyperlink{class_player}{Player<char>}}**\ \mbox{\hyperlink{class_word___u_i_a8a2b68a9f9bdf5282439451a1c04d0c6}{setup\_players}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00172\ \};}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

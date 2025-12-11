@@ -1,0 +1,73 @@
+\doxysection{Main.\+cpp File Reference}
+\hypertarget{_main_8cpp}{}\label{_main_8cpp}\index{Main.cpp@{Main.cpp}}
+
+
+Main menu for GRID WARS, a collection of Tic-\/\+Tac-\/\+Toe variants.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include "{}games/numerical\+\_\+tic.\+h"{}}\newline
+{\ttfamily \#include "{}games/\+Board\+Game\+\_\+\+Classes.\+h"{}}\newline
+{\ttfamily \#include "{}games/xo\+\_\+5.\+h"{}}\newline
+{\ttfamily \#include "{}games/sus.\+h"{}}\newline
+{\ttfamily \#include "{}games/obstacles\+\_\+xo.\+h"{}}\newline
+{\ttfamily \#include "{}games/\+Misere.\+h"{}}\newline
+{\ttfamily \#include "{}games/tic\+\_\+4x4.\+h"{}}\newline
+{\ttfamily \#include "{}games/word\+\_\+tic.\+h"{}}\newline
+{\ttfamily \#include "{}games/connect\+\_\+four.\+h"{}}\newline
+{\ttfamily \#include "{}games/memory\+\_\+xo.\+h"{}}\newline
+{\ttfamily \#include "{}GAMES/\+Diamond.\+h"{}}\newline
+{\ttfamily \#include "{}GAMES/\+Infinity.\+h"{}}\newline
+{\ttfamily \#include "{}GAMES/pyramid\+\_\+tictactoe.\+h"{}}\newline
+{\ttfamily \#include "{}GAMES/\+Ultimate.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_main_8cpp_af67480724089637b55a8148566870f16}{show\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Displays the main menu with all available games. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Entry point for the GRID WARS program. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main menu for GRID WARS, a collection of Tic-\/\+Tac-\/\+Toe variants. 
+
+This program allows the user to select from multiple Tic-\/\+Tac-\/\+Toe games, set up players, run the selected game, and clean up resources afterward. 
+
+\label{doc-func-members}
+\Hypertarget{_main_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{Main.cpp@{Main.cpp}!main@{main}}
+\index{main@{main}!Main.cpp@{Main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{_main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Entry point for the GRID WARS program. 
+
+This function runs the main loop that allows the user to\+:
+\begin{DoxyEnumerate}
+\item Choose a game from the menu.
+\item Set up the players.
+\item Run the selected game using the appropriate \doxylink{class_game_manager}{Game\+Manager}.
+\item Clean up all allocated resources.
+\end{DoxyEnumerate}
+
+The loop continues until the user chooses to exit (option 0).
+
+\begin{DoxyReturn}{Returns}
+int Returns 0 upon program exit. 
+\end{DoxyReturn}
+\Hypertarget{_main_8cpp_af67480724089637b55a8148566870f16}\index{Main.cpp@{Main.cpp}!show\_menu@{show\_menu}}
+\index{show\_menu@{show\_menu}!Main.cpp@{Main.cpp}}
+\doxysubsubsection{\texorpdfstring{show\_menu()}{show\_menu()}}
+{\footnotesize\ttfamily \label{_main_8cpp_af67480724089637b55a8148566870f16} 
+void show\+\_\+menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Displays the main menu with all available games. 
+
+The menu lists all Tic-\/\+Tac-\/\+Toe variants and allows the user to select one by number. 
