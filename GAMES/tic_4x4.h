@@ -1,3 +1,14 @@
+/**
+ * @file tic_4x4.h
+ * @brief Header file for 4x4 Tic-Tac-Toe game classes.
+ * @author Mohamed Ibrahim
+ *
+ * This file provides:
+ * - `tic_4x4_Board`: A specialized board class for the Tic-Tac-Toe game.
+ * - `tic_4x4_UI`: A user interface class tailored to This game setup and player interaction.
+ */
+
+
 #ifndef _TIC_4X4_H
 #define _TIC_4X4_H
 

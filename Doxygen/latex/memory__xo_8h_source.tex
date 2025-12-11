@@ -1,0 +1,81 @@
+\doxysection{memory\+\_\+xo.\+h}
+\hypertarget{memory__xo_8h_source}{}\label{memory__xo_8h_source}\mbox{\hyperlink{memory__xo_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ MEMORY\_XO\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ MEMORY\_XO\_H}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}BoardGame\_Classes.h"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include<vector>}}
+\DoxyCodeLine{00017\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00020\ \textcolor{comment}{@brief\ Vectors\ to\ record\ moves\ in\ Memory\ game.}}
+\DoxyCodeLine{00021\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00022\ \textcolor{keyword}{static}\ vector<\ int>\ xV\_mem;}
+\DoxyCodeLine{00023\ \textcolor{keyword}{static}\ vector<\ int>\ yV\_mem;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00026\ \textcolor{comment}{@brief\ Record\ a\ move\ in\ Memory\ game.}}
+\DoxyCodeLine{00027\ \textcolor{comment}{@param\ row\ The\ row\ index\ of\ the\ move.}}
+\DoxyCodeLine{00028\ \textcolor{comment}{@param\ col\ The\ column\ index\ of\ the\ move.}}
+\DoxyCodeLine{00029\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{void}\ record\_move\_mem(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00033\ \textcolor{comment}{@brief\ Get\ the\ x-\/coordinate\ of\ a\ recorded\ move\ in\ Memory\ game.}}
+\DoxyCodeLine{00034\ \textcolor{comment}{@param\ index\ The\ index\ of\ the\ move\ to\ retrieve.}}
+\DoxyCodeLine{00035\ \textcolor{comment}{@return\ The\ x-\/coordinate\ of\ the\ move.}}
+\DoxyCodeLine{00036\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00037\ \textcolor{keywordtype}{int}\ get\_x\_move\_mem(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00038\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00039\ \textcolor{comment}{@brief\ Get\ the\ y-\/coordinate\ of\ a\ recorded\ move\ in\ Memory\ game.}}
+\DoxyCodeLine{00040\ \textcolor{comment}{@param\ index\ The\ index\ of\ the\ move\ to\ retrieve.}}
+\DoxyCodeLine{00041\ \textcolor{comment}{@return\ The\ y-\/coordinate\ of\ the\ move.}}
+\DoxyCodeLine{00042\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00043\ \textcolor{keywordtype}{int}\ get\_y\_move\_mem(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{static}\ vector<vector<char>>\ real(3,vector<char>(3,\textcolor{charliteral}{'.'}));}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_memory___x_o___board_a770a140fcc3ba2bd75651920eaf9e471}{Memory\_XO\_Board}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}<char>\ \{}
+\DoxyCodeLine{00063\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{char}\ blank\_symbol\ =\ \textcolor{charliteral}{'.'};\ }
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{class_memory___x_o___board_a770a140fcc3ba2bd75651920eaf9e471}{Memory\_XO\_Board}}();}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_memory___x_o___board_a201ab4f964754b986636f6db4c94ee23}{update\_board}}(\mbox{\hyperlink{class_move}{Move<char>}}*\ move)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_memory___x_o___board_a5f6a929148c3c77de12c547751d9c54c}{is\_win}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_memory___x_o___board_acd10f90fba3cf3081a7e0bb69331fa5d}{is\_lose}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_memory___x_o___board_a3e57c654a4cc56bcacc47d2d3e46ee9e}{is\_draw}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_memory___x_o___board_ab65c60abf91832caa5ba5966d466c447}{game\_is\_over}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00106\ \};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_memory___x_o___u_i_a67ff4797236c77a606ccd9037dbd637c}{Memory\_XO\_UI}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}}<char>\ \{}
+\DoxyCodeLine{00120\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00124\ \ \ \ \ \mbox{\hyperlink{class_memory___x_o___u_i_a67ff4797236c77a606ccd9037dbd637c}{Memory\_XO\_UI}}();}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00131\ \ \ \ \ \mbox{\hyperlink{class_move}{Move<char>}}*\ \mbox{\hyperlink{class_memory___x_o___u_i_a8e6198bcc5ab686dc445ef77027278f9}{get\_move}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00140\ \ \ \ \ \mbox{\hyperlink{class_player}{Player<char>}}*\ \mbox{\hyperlink{class_memory___x_o___u_i_a6a84a27face2fff6f7f4f23da3b7f254}{create\_player}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{char}\ symbol,\ PlayerType\ type)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00143\ \textcolor{comment}{\ \ \ \ @brief\ Sets\ up\ the\ players\ for\ the\ Memory\ game.}}
+\DoxyCodeLine{00144\ \textcolor{comment}{\ \ \ \ @return\ An\ array\ of\ pointers\ to\ the\ created\ Player<char>\ instances.}}
+\DoxyCodeLine{00145\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00146\ \ \ \ \ \mbox{\hyperlink{class_player}{Player<char>}}**\ \mbox{\hyperlink{class_memory___x_o___u_i_afe1017ed27e2d84cdb8d1ddfc6bb1101}{setup\_players}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00147\ \};}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MEMORY\_XO\_H}}
+
+\end{DoxyCode}

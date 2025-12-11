@@ -1,0 +1,86 @@
+\doxysection{word\+\_\+tic.\+h File Reference}
+\hypertarget{word__tic_8h}{}\label{word__tic_8h}\index{word\_tic.h@{word\_tic.h}}
+
+
+Header file for Word Tic-\/\+Tac-\/\+Toe game classes.  
+
+
+{\ttfamily \#include "{}Board\+Game\+\_\+\+Classes.\+h"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+set$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_word___board}{Word\+\_\+\+Board}}
+\begin{DoxyCompactList}\small\item\em Specialized board class for the Word game. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_word___u_i}{Word\+\_\+\+UI}}
+\begin{DoxyCompactList}\small\item\em User interface class for the Word game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{word__tic_8h_a68bc334a07042ac9a0003d8c345bae6d}\label{word__tic_8h_a68bc334a07042ac9a0003d8c345bae6d} 
+void {\bfseries record\+\_\+move\+\_\+four} (int row, int col)
+\item 
+\Hypertarget{word__tic_8h_a9b3b7ad29464eb15a0e1c21114ee36d4}\label{word__tic_8h_a9b3b7ad29464eb15a0e1c21114ee36d4} 
+int {\bfseries get\+\_\+x\+\_\+move\+\_\+four} (int index)
+\item 
+\Hypertarget{word__tic_8h_af8262c3e72ceb7b4ca178dcee3bd953c}\label{word__tic_8h_af8262c3e72ceb7b4ca178dcee3bd953c} 
+int {\bfseries get\+\_\+y\+\_\+move\+\_\+four} (int index)
+\item 
+\Hypertarget{word__tic_8h_a60d3fa38c5180ca9dcb87a8a391fe224}\label{word__tic_8h_a60d3fa38c5180ca9dcb87a8a391fe224} 
+void {\bfseries load\+\_\+dictionary} ()
+\begin{DoxyCompactList}\small\item\em Load dic.\+txt in dictionary. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{word__tic_8h_ad1b177b00f118379dd26b91bb339d53e}{is\+\_\+valid\+\_\+word}} (const std\+::string \&w)
+\begin{DoxyCompactList}\small\item\em Check if the word valid (in dic) or no. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{word__tic_8h_a505eb4c3748a52b37db91a42dc88b799}{random\+\_\+letter}} ()
+\begin{DoxyCompactList}\small\item\em select a random letter for computer player \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for Word Tic-\/\+Tac-\/\+Toe game classes. 
+
+\begin{DoxyAuthor}{Author}
+Mustafa Mahmoud
+\end{DoxyAuthor}
+This file provides\+:
+\begin{DoxyItemize}
+\item {\ttfamily \doxylink{class_word___board}{Word\+\_\+\+Board}}\+: A specialized board class for the Tic-\/\+Tac-\/\+Toe game.
+\item {\ttfamily \doxylink{class_word___u_i}{Word\+\_\+\+UI}}\+: A user interface class tailored to This game setup and player interaction. 
+\end{DoxyItemize}
+
+\label{doc-func-members}
+\Hypertarget{word__tic_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{word__tic_8h_ad1b177b00f118379dd26b91bb339d53e}\index{word\_tic.h@{word\_tic.h}!is\_valid\_word@{is\_valid\_word}}
+\index{is\_valid\_word@{is\_valid\_word}!word\_tic.h@{word\_tic.h}}
+\doxysubsubsection{\texorpdfstring{is\_valid\_word()}{is\_valid\_word()}}
+{\footnotesize\ttfamily \label{word__tic_8h_ad1b177b00f118379dd26b91bb339d53e} 
+bool is\+\_\+valid\+\_\+word (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{w}{}\end{DoxyParamCaption})}
+
+
+
+Check if the word valid (in dic) or no. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & string the word (w) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the word (w) valid (in dic) 
+\end{DoxyReturn}
+\Hypertarget{word__tic_8h_a505eb4c3748a52b37db91a42dc88b799}\index{word\_tic.h@{word\_tic.h}!random\_letter@{random\_letter}}
+\index{random\_letter@{random\_letter}!word\_tic.h@{word\_tic.h}}
+\doxysubsubsection{\texorpdfstring{random\_letter()}{random\_letter()}}
+{\footnotesize\ttfamily \label{word__tic_8h_a505eb4c3748a52b37db91a42dc88b799} 
+char random\+\_\+letter (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+select a random letter for computer player 
+
+\begin{DoxyReturn}{Returns}
+character for computer 
+\end{DoxyReturn}

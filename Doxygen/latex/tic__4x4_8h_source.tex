@@ -1,0 +1,45 @@
+\doxysection{tic\+\_\+4x4.\+h}
+\hypertarget{tic__4x4_8h_source}{}\label{tic__4x4_8h_source}\mbox{\hyperlink{tic__4x4_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ \_TIC\_4X4\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ \_TIC\_4X4\_H}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}BoardGame\_Classes.h"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }tic\_4x4\_Board\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}<char>\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{char}\ current\_player\ =\ \textcolor{charliteral}{'X'};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ tic\_4x4\_Board();}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtic__4x4___board_ab71bb41a0ea0799fa3353f7842a01b1a}{update\_board}}(\mbox{\hyperlink{class_move}{Move<char>}}*\ move)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtic__4x4___board_a3810cc6685abf0121e1876234549cbaa}{is\_win}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtic__4x4___board_a699c2f03ab722a154c44afde20a4e484}{is\_lose}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtic__4x4___board_a89f5994a14a5a146fad4ab622b5c88db}{is\_draw}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classtic__4x4___board_aa7cddcca4b9ea7acc361aa33d17653bb}{game\_is\_over}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//\ Special\ methods\ for\ our\ game}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{bool}\ move\_token(\textcolor{keywordtype}{int}\ fromX,\ \textcolor{keywordtype}{int}\ fromY,\ \textcolor{keywordtype}{int}\ toX,\ \textcolor{keywordtype}{int}\ toY,\ \textcolor{keywordtype}{char}\ symbol);}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{bool}\ is\_valid\_move(\textcolor{keywordtype}{int}\ fromX,\ \textcolor{keywordtype}{int}\ fromY,\ \textcolor{keywordtype}{int}\ toX,\ \textcolor{keywordtype}{int}\ toY,\ \textcolor{keywordtype}{char}\ symbol)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ switch\_player();}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{char}\ get\_current\_player()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ current\_player;\ \}}
+\DoxyCodeLine{00034\ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{class\ }tic\_4x4\_UI\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}}<char>\ \{}
+\DoxyCodeLine{00037\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{classtic__4x4___board}{tic\_4x4\_Board}}*\ board;}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00041\ \ \ \ \ tic\_4x4\_UI();}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{class_move}{Move<char>}}*\ \mbox{\hyperlink{classtic__4x4___u_i_a468b022e9cbc2540f89751890ba703a0}{get\_move}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{class_player}{Player<char>}}**\ \mbox{\hyperlink{classtic__4x4___u_i_abfa0889b1ef0786f0cdf5cc2dcac31f4}{setup\_players}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ set\_board(\mbox{\hyperlink{classtic__4x4___board}{tic\_4x4\_Board}}*\ b)\ \{\ board\ =\ b;\ \}}
+\DoxyCodeLine{00046\ \};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

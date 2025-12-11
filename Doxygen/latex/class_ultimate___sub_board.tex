@@ -1,0 +1,117 @@
+\doxysection{Ultimate\+\_\+\+Sub\+Board Class Reference}
+\hypertarget{class_ultimate___sub_board}{}\label{class_ultimate___sub_board}\index{Ultimate\_SubBoard@{Ultimate\_SubBoard}}
+
+
+Represents a 3x3 sub-\/board in Ultimate Tic-\/\+Tac-\/\+Toe.  
+
+
+
+
+{\ttfamily \#include $<$Ultimate.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_ultimate___sub_board_a8405c8671873859c0e56912d56f85907}\label{class_ultimate___sub_board_a8405c8671873859c0e56912d56f85907} 
+{\bfseries Ultimate\+\_\+\+Sub\+Board} ()
+\begin{DoxyCompactList}\small\item\em Default constructor initializes the sub-\/board to empty and unfinished. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ultimate___sub_board_a313f1c65d4c432f56cc59b00e98c8cae}{place\+\_\+mark}} (int r, int c, char s)
+\begin{DoxyCompactList}\small\item\em Places a mark on the sub-\/board. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ultimate___sub_board_ad2f7ee47b53c5c049058993afa8495c1}{is\+\_\+full}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the sub-\/board is full. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ultimate___sub_board_aaee0b0fc4ff83af315f4dfcf7f7b3f7a}{is\+\_\+finished}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the sub-\/board has finished. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_ultimate___sub_board_a7bd1d5865a290f2abf64fd5a2bef0739}{get\+\_\+winner}} () const
+\begin{DoxyCompactList}\small\item\em Returns the winner of the sub-\/board. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ \mbox{\hyperlink{class_ultimate___sub_board_a59d1549552df95cbdda92ae0cd654730}{get\+\_\+matrix}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current state of the sub-\/board as a 2D vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a 3x3 sub-\/board in Ultimate Tic-\/\+Tac-\/\+Toe. 
+
+This class manages the state of a single sub-\/board, including placement of marks, checking for wins, and returning the current board state. 
+
+\label{doc-func-members}
+\Hypertarget{class_ultimate___sub_board_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ultimate___sub_board_a59d1549552df95cbdda92ae0cd654730}\index{Ultimate\_SubBoard@{Ultimate\_SubBoard}!get\_matrix@{get\_matrix}}
+\index{get\_matrix@{get\_matrix}!Ultimate\_SubBoard@{Ultimate\_SubBoard}}
+\doxysubsubsection{\texorpdfstring{get\_matrix()}{get\_matrix()}}
+{\footnotesize\ttfamily \label{class_ultimate___sub_board_a59d1549552df95cbdda92ae0cd654730} 
+vector$<$ vector$<$ char $>$ $>$ Ultimate\+\_\+\+Sub\+Board\+::get\+\_\+matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Returns the current state of the sub-\/board as a 2D vector. 
+
+\begin{DoxyReturn}{Returns}
+3x3 vector of chars representing the sub-\/board 
+\end{DoxyReturn}
+\Hypertarget{class_ultimate___sub_board_a7bd1d5865a290f2abf64fd5a2bef0739}\index{Ultimate\_SubBoard@{Ultimate\_SubBoard}!get\_winner@{get\_winner}}
+\index{get\_winner@{get\_winner}!Ultimate\_SubBoard@{Ultimate\_SubBoard}}
+\doxysubsubsection{\texorpdfstring{get\_winner()}{get\_winner()}}
+{\footnotesize\ttfamily \label{class_ultimate___sub_board_a7bd1d5865a290f2abf64fd5a2bef0739} 
+char Ultimate\+\_\+\+Sub\+Board\+::get\+\_\+winner (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Returns the winner of the sub-\/board. 
+
+\begin{DoxyReturn}{Returns}
+Symbol of the winner (\textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{}) or \textquotesingle{}\textbackslash{}0\textquotesingle{} if none 
+\end{DoxyReturn}
+\Hypertarget{class_ultimate___sub_board_aaee0b0fc4ff83af315f4dfcf7f7b3f7a}\index{Ultimate\_SubBoard@{Ultimate\_SubBoard}!is\_finished@{is\_finished}}
+\index{is\_finished@{is\_finished}!Ultimate\_SubBoard@{Ultimate\_SubBoard}}
+\doxysubsubsection{\texorpdfstring{is\_finished()}{is\_finished()}}
+{\footnotesize\ttfamily \label{class_ultimate___sub_board_aaee0b0fc4ff83af315f4dfcf7f7b3f7a} 
+bool Ultimate\+\_\+\+Sub\+Board\+::is\+\_\+finished (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks if the sub-\/board has finished. 
+
+\begin{DoxyReturn}{Returns}
+True if finished, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_ultimate___sub_board_ad2f7ee47b53c5c049058993afa8495c1}\index{Ultimate\_SubBoard@{Ultimate\_SubBoard}!is\_full@{is\_full}}
+\index{is\_full@{is\_full}!Ultimate\_SubBoard@{Ultimate\_SubBoard}}
+\doxysubsubsection{\texorpdfstring{is\_full()}{is\_full()}}
+{\footnotesize\ttfamily \label{class_ultimate___sub_board_ad2f7ee47b53c5c049058993afa8495c1} 
+bool Ultimate\+\_\+\+Sub\+Board\+::is\+\_\+full (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks if the sub-\/board is full. 
+
+\begin{DoxyReturn}{Returns}
+True if all cells are filled, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_ultimate___sub_board_a313f1c65d4c432f56cc59b00e98c8cae}\index{Ultimate\_SubBoard@{Ultimate\_SubBoard}!place\_mark@{place\_mark}}
+\index{place\_mark@{place\_mark}!Ultimate\_SubBoard@{Ultimate\_SubBoard}}
+\doxysubsubsection{\texorpdfstring{place\_mark()}{place\_mark()}}
+{\footnotesize\ttfamily \label{class_ultimate___sub_board_a313f1c65d4c432f56cc59b00e98c8cae} 
+bool Ultimate\+\_\+\+Sub\+Board\+::place\+\_\+mark (\begin{DoxyParamCaption}\item[{int}]{r}{, }\item[{int}]{c}{, }\item[{char}]{s}{}\end{DoxyParamCaption})}
+
+
+
+Places a mark on the sub-\/board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Row index (0-\/2) \\
+\hline
+{\em c} & Column index (0-\/2) \\
+\hline
+{\em s} & Symbol to place (\textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if placement succeeded, false if the cell was occupied 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Ultimate.\+h\item 
+Ultimate.\+cpp\end{DoxyCompactItemize}

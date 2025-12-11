@@ -1,0 +1,149 @@
+\doxysection{Numerical\+Tic\+UI Class Reference}
+\hypertarget{class_numerical_tic_u_i}{}\label{class_numerical_tic_u_i}\index{NumericalTicUI@{NumericalTicUI}}
+
+
+User interface class for player interaction in Numerical Tic-\/\+Tac-\/\+Toe.  
+
+
+
+
+{\ttfamily \#include $<$numerical\+\_\+tic.\+h$>$}
+
+Inheritance diagram for Numerical\+Tic\+UI\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_numerical_tic_u_i}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_numerical_tic_u_i_a46a22c84fb2af64508a69813099a6881}{Numerical\+Tic\+UI}} (string message, int cell\+\_\+display\+\_\+width)
+\begin{DoxyCompactList}\small\item\em Constructs the \doxylink{class_u_i}{UI} for the game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_move}{Move}}$<$ int $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_numerical_tic_u_i_a7f5ff6129bda7ae49abe8beb7eba1bb6}{get\+\_\+move}} (\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Gets a move from the given player. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_numerical_tic_u_i_a4e6e7da69d420e2f7eed7c132ef02297}{create\+\_\+player}} (string \&name, int symbol, Player\+Type type) override
+\begin{DoxyCompactList}\small\item\em Creates a player object for the game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_numerical_tic_u_i_a21a949b651bf794956e6e540fb7703d7}{setup\+\_\+players}} () override
+\begin{DoxyCompactList}\small\item\em Sets up the two players for the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ int $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries UI} (int cell\+\_\+display\+\_\+width=3)
+\begin{DoxyCompactList}\small\item\em Construct the \doxylink{class_u_i}{UI} and display a welcome message. \end{DoxyCompactList}\item 
+virtual void {\bfseries display\+\_\+message} (string message)
+\begin{DoxyCompactList}\small\item\em Display any message to the user. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_i_a94561e0bb4bbcbe5ff71ca6d751922df}{create\+\_\+player}} (string \&name, int symbol, Player\+Type type)
+\begin{DoxyCompactList}\small\item\em Create a player object based on input name, symbol, and type. \end{DoxyCompactList}\item 
+virtual void {\bfseries display\+\_\+board\+\_\+matrix} (const vector$<$ vector$<$ int $>$ $>$ \&matrix) const
+\begin{DoxyCompactList}\small\item\em Display the current board matrix in formatted form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ int $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual string {\bfseries get\+\_\+player\+\_\+name} (string player\+\_\+label)
+\begin{DoxyCompactList}\small\item\em Ask the user for the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+virtual Player\+Type {\bfseries get\+\_\+player\+\_\+type\+\_\+choice} (string player\+\_\+label, const vector$<$ string $>$ \&options)
+\begin{DoxyCompactList}\small\item\em Ask the user to choose the player type from a list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_u_i}{UI$<$ int $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries cell\+\_\+width}
+\begin{DoxyCompactList}\small\item\em Width of each displayed board cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+User interface class for player interaction in Numerical Tic-\/\+Tac-\/\+Toe. 
+
+\label{doc-constructors}
+\Hypertarget{class_numerical_tic_u_i_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_numerical_tic_u_i_a46a22c84fb2af64508a69813099a6881}\index{NumericalTicUI@{NumericalTicUI}!NumericalTicUI@{NumericalTicUI}}
+\index{NumericalTicUI@{NumericalTicUI}!NumericalTicUI@{NumericalTicUI}}
+\doxysubsubsection{\texorpdfstring{NumericalTicUI()}{NumericalTicUI()}}
+{\footnotesize\ttfamily \label{class_numerical_tic_u_i_a46a22c84fb2af64508a69813099a6881} 
+Numerical\+Tic\+UI\+::\+Numerical\+Tic\+UI (\begin{DoxyParamCaption}\item[{string}]{message}{, }\item[{int}]{cell\+\_\+display\+\_\+width}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs the \doxylink{class_u_i}{UI} for the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message displayed before the \doxylink{class_u_i}{UI} prints the board. \\
+\hline
+{\em cell\+\_\+display\+\_\+width} & Width of each printed cell. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_numerical_tic_u_i_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_numerical_tic_u_i_a4e6e7da69d420e2f7eed7c132ef02297}\index{NumericalTicUI@{NumericalTicUI}!create\_player@{create\_player}}
+\index{create\_player@{create\_player}!NumericalTicUI@{NumericalTicUI}}
+\doxysubsubsection{\texorpdfstring{create\_player()}{create\_player()}}
+{\footnotesize\ttfamily \label{class_numerical_tic_u_i_a4e6e7da69d420e2f7eed7c132ef02297} 
+\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*} Numerical\+Tic\+UI\+::create\+\_\+player (\begin{DoxyParamCaption}\item[{string \&}]{name}{, }\item[{int}]{symbol}{, }\item[{Player\+Type}]{type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Creates a player object for the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Reference to the player\textquotesingle{}s name. \\
+\hline
+{\em symbol} & \doxylink{class_player}{Player}\textquotesingle{}s numerical symbol (odd/even). \\
+\hline
+{\em type} & Whether the player is human or computer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the newly created player. 
+\end{DoxyReturn}
+\Hypertarget{class_numerical_tic_u_i_a7f5ff6129bda7ae49abe8beb7eba1bb6}\index{NumericalTicUI@{NumericalTicUI}!get\_move@{get\_move}}
+\index{get\_move@{get\_move}!NumericalTicUI@{NumericalTicUI}}
+\doxysubsubsection{\texorpdfstring{get\_move()}{get\_move()}}
+{\footnotesize\ttfamily \label{class_numerical_tic_u_i_a7f5ff6129bda7ae49abe8beb7eba1bb6} 
+\mbox{\hyperlink{class_move}{Move}}$<$ int $>$ \texorpdfstring{$\ast$}{*} Numerical\+Tic\+UI\+::get\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets a move from the given player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the current player. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to a newly created \doxylink{class_move}{Move} object. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_u_i_a8befa259c38c57e6ae2e8ed81c476337}{UI$<$ int $>$}}.
+
+\Hypertarget{class_numerical_tic_u_i_a21a949b651bf794956e6e540fb7703d7}\index{NumericalTicUI@{NumericalTicUI}!setup\_players@{setup\_players}}
+\index{setup\_players@{setup\_players}!NumericalTicUI@{NumericalTicUI}}
+\doxysubsubsection{\texorpdfstring{setup\_players()}{setup\_players()}}
+{\footnotesize\ttfamily \label{class_numerical_tic_u_i_a21a949b651bf794956e6e540fb7703d7} 
+\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} Numerical\+Tic\+UI\+::setup\+\_\+players (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets up the two players for the game. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to an array of two \doxylink{class_player}{Player} pointers. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{UI$<$ int $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{numerical__tic_8h}{numerical\+\_\+tic.\+h}}\item 
+numerical\+\_\+tic.\+cpp\end{DoxyCompactItemize}

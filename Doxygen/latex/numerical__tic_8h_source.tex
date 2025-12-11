@@ -1,0 +1,44 @@
+\doxysection{numerical\+\_\+tic.\+h}
+\hypertarget{numerical__tic_8h_source}{}\label{numerical__tic_8h_source}\mbox{\hyperlink{numerical__tic_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ NUMERICAL\_TIC\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ NUMERICAL\_TIC\_H}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}BoardGame\_Classes.h"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_numerical_tic_board_a566182c9bad38e1d49113fb1cf9bf7d2}{NumericalTicBoard}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}<int>\ \{}
+\DoxyCodeLine{00028\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00032\ \ \ \ \ std::vector<int>\ used\_numbers;}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_numerical_tic_board_a566182c9bad38e1d49113fb1cf9bf7d2}{NumericalTicBoard}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_numerical_tic_board_af9276b6f666b5ad60f9d04f101eb89c3}{update\_board}}(\mbox{\hyperlink{class_move}{Move<int>}}*\ move)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_numerical_tic_board_aedd35037b480a429b65d0a29994b6a0f}{is\_win}}(\mbox{\hyperlink{class_player}{Player<int>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_numerical_tic_board_a839fd636e1424b2f8851ede5293e2067}{is\_lose}}(\mbox{\hyperlink{class_player}{Player<int>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_numerical_tic_board_a2462ddaa86b0024091f069dcbb687a5f}{is\_draw}}(\mbox{\hyperlink{class_player}{Player<int>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_numerical_tic_board_ac52ee06a307e589e68432085a9c70a4b}{game\_is\_over}}(\mbox{\hyperlink{class_player}{Player<int>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00074\ \};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00080\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_numerical_tic_u_i_a46a22c84fb2af64508a69813099a6881}{NumericalTicUI}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}}<int>\ \{}
+\DoxyCodeLine{00081\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00087\ \ \ \ \ \mbox{\hyperlink{class_numerical_tic_u_i_a46a22c84fb2af64508a69813099a6881}{NumericalTicUI}}(\textcolor{keywordtype}{string}\ message,\ \textcolor{keywordtype}{int}\ cell\_display\_width)\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}}<int>(message,\ cell\_display\_width)\ \{\}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00095\ \ \ \ \ \mbox{\hyperlink{class_move}{Move<int>}}*\ \mbox{\hyperlink{class_numerical_tic_u_i_a7f5ff6129bda7ae49abe8beb7eba1bb6}{get\_move}}(\mbox{\hyperlink{class_player}{Player<int>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00104\ \ \ \ \ \mbox{\hyperlink{class_player}{Player<int>}}*\ \mbox{\hyperlink{class_numerical_tic_u_i_a4e6e7da69d420e2f7eed7c132ef02297}{create\_player}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{int}\ symbol,\ PlayerType\ type)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00110\ \ \ \ \ \mbox{\hyperlink{class_player}{Player<int>}}**\ \mbox{\hyperlink{class_numerical_tic_u_i_a21a949b651bf794956e6e540fb7703d7}{setup\_players}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00111\ \};}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

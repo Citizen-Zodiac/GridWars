@@ -1,0 +1,87 @@
+\doxysection{Ultimate.\+h}
+\hypertarget{_ultimate_8h_source}{}\label{_ultimate_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ultimate___sub_board_a8405c8671873859c0e56912d56f85907}{Ultimate\_SubBoard}}\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{char}\ cells[3][3];\ }
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{bool}\ finished;\ \ \ \ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{char}\ winner;\ \ \ \ \ \ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{bool}\ three\_in\_row(\textcolor{keywordtype}{char}\ s);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_ultimate___sub_board_a8405c8671873859c0e56912d56f85907}{Ultimate\_SubBoard}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ultimate___sub_board_a313f1c65d4c432f56cc59b00e98c8cae}{place\_mark}}(\textcolor{keywordtype}{int}\ r,\ \textcolor{keywordtype}{int}\ c,\ \textcolor{keywordtype}{char}\ s);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ultimate___sub_board_ad2f7ee47b53c5c049058993afa8495c1}{is\_full}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ultimate___sub_board_aaee0b0fc4ff83af315f4dfcf7f7b3f7a}{is\_finished}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_ultimate___sub_board_a7bd1d5865a290f2abf64fd5a2bef0739}{get\_winner}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00052\ \ \ \ \ vector<vector<char>>\ \mbox{\hyperlink{class_ultimate___sub_board_a59d1549552df95cbdda92ae0cd654730}{get\_matrix}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00053\ \};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ultimate___main_board_a494432d0f624ce7b4ca6d41ecb8e82c2}{Ultimate\_MainBoard}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}<char>\ \{}
+\DoxyCodeLine{00063\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{class_ultimate___sub_board}{Ultimate\_SubBoard}}\ sub[3][3];\ }
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{bool}\ main\_three\_in\_row(\textcolor{keywordtype}{char}\ s);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{class_ultimate___main_board_a494432d0f624ce7b4ca6d41ecb8e82c2}{Ultimate\_MainBoard}}();}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ultimate___main_board_a715943c81a28089d6dc8613c46284314}{update\_board}}(\mbox{\hyperlink{class_move}{Move<char>}}*\ move)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ultimate___main_board_a9267fada98f9bd23fcc3ced5d4b4139d}{is\_win}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ p)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ultimate___main_board_af4458d0278288044b7a17a073b1b9727}{is\_lose}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ p)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ultimate___main_board_a32d9d2717dd9ea62e8f8f4cb463cb3ab}{is\_draw}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ p)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ultimate___main_board_a08efdbd03cb947d0eb5ab9ea91b9bbab}{game\_is\_over}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ p)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00101\ \ \ \ \ \mbox{\hyperlink{class_ultimate___sub_board}{Ultimate\_SubBoard}}\&\ \mbox{\hyperlink{class_ultimate___main_board_a82ecdaae97d3c73f8786f81791e6cd7c}{get\_sub}}(\textcolor{keywordtype}{int}\ r,\ \textcolor{keywordtype}{int}\ c);}
+\DoxyCodeLine{00102\ \};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00109\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ultimate___computer_player_adeb21ea7ec5131e5c9c68e556c5ff558}{Ultimate\_ComputerPlayer}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_player_adb4e803a7ac0356b111b8ca79d766976}{Player}}<char>\ \{}
+\DoxyCodeLine{00110\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00116\ \ \ \ \ \mbox{\hyperlink{class_ultimate___computer_player_adeb21ea7ec5131e5c9c68e556c5ff558}{Ultimate\_ComputerPlayer}}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_player_af0ad0d4ca8584d23a98c723cd703a4f6}{name}},\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_player_a272d6c4dab769930d4f8074918e7708a}{symbol}});}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00122\ \ \ \ \ \mbox{\hyperlink{class_move}{Move<char>}}*\ \mbox{\hyperlink{class_ultimate___computer_player_a7f601799f89f9d26a456713882818d8c}{get\_ultimate\_computer\_move}}();}
+\DoxyCodeLine{00123\ \};}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00130\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ultimate___u_i_a9e3b3b9207e382ffc43d8e34bcb34ce0}{Ultimate\_UI}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}}<char>\ \{}
+\DoxyCodeLine{00131\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00133\ \ \ \ \ \mbox{\hyperlink{class_ultimate___u_i_a9e3b3b9207e382ffc43d8e34bcb34ce0}{Ultimate\_UI}}();}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00140\ \ \ \ \ \mbox{\hyperlink{class_move}{Move<char>}}*\ \mbox{\hyperlink{class_ultimate___u_i_ac0abfef045d4caf1c0c309ef200ef2fb}{get\_move}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ p)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00149\ \ \ \ \ \mbox{\hyperlink{class_player}{Player<char>}}*\ \mbox{\hyperlink{class_ultimate___u_i_a8b7c8b09278cdef5dc878ef89eaa83e7}{create\_player}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{char}\ symbol,\ PlayerType\ type)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ultimate___u_i_ab5a19e43341695f4f8c5c67fd8d6b861}{display\_ultimate\_board}}(\mbox{\hyperlink{class_ultimate___main_board}{Ultimate\_MainBoard}}*\ board);}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_ultimate___u_i_ab8e086219852ccec5b75ef804dfb83c9}{show\_menu}}();}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00165\ \ \ \ \ \mbox{\hyperlink{class_player}{Player<char>}}**\ \mbox{\hyperlink{class_ultimate___u_i_a08473160c79e0349368ac3f065a26d67}{setup\_players}}();}
+\DoxyCodeLine{00166\ \};}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00173\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ultimate___game_manager_a0c5a504ef31059e3d088d2b4d664be1f}{Ultimate\_GameManager}}\ \{}
+\DoxyCodeLine{00174\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00175\ \ \ \ \ \mbox{\hyperlink{class_ultimate___main_board}{Ultimate\_MainBoard}}*\ board;\ }
+\DoxyCodeLine{00176\ \ \ \ \ \mbox{\hyperlink{class_player}{Player<char>}}*\ players[2];\ \ }
+\DoxyCodeLine{00177\ \ \ \ \ \mbox{\hyperlink{class_ultimate___u_i}{Ultimate\_UI}}*\ ui;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00186\ \ \ \ \ \mbox{\hyperlink{class_ultimate___game_manager_a0c5a504ef31059e3d088d2b4d664be1f}{Ultimate\_GameManager}}(\mbox{\hyperlink{class_ultimate___main_board}{Ultimate\_MainBoard}}*\ b,\ \mbox{\hyperlink{class_player}{Player<char>}}*\ p[2],\ \mbox{\hyperlink{class_ultimate___u_i}{Ultimate\_UI}}*\ u);}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ultimate___game_manager_a98bb1d52cdb0ca78043c54f647463187}{run}}();}
+\DoxyCodeLine{00190\ \};}
+
+\end{DoxyCode}

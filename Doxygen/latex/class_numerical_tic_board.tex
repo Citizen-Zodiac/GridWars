@@ -1,0 +1,193 @@
+\doxysection{Numerical\+Tic\+Board Class Reference}
+\hypertarget{class_numerical_tic_board}{}\label{class_numerical_tic_board}\index{NumericalTicBoard@{NumericalTicBoard}}
+
+
+Logic handler for the Numerical Tic-\/\+Tac-\/\+Toe board.  
+
+
+
+
+{\ttfamily \#include $<$numerical\+\_\+tic.\+h$>$}
+
+Inheritance diagram for Numerical\+Tic\+Board\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_numerical_tic_board}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_numerical_tic_board_a566182c9bad38e1d49113fb1cf9bf7d2}\label{class_numerical_tic_board_a566182c9bad38e1d49113fb1cf9bf7d2} 
+{\bfseries Numerical\+Tic\+Board} ()
+\begin{DoxyCompactList}\small\item\em Constructs an empty Numerical Tic-\/\+Tac-\/\+Toe board. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_numerical_tic_board_af9276b6f666b5ad60f9d04f101eb89c3}{update\+\_\+board}} (\mbox{\hyperlink{class_move}{Move}}$<$ int $>$ \texorpdfstring{$\ast$}{*}move) override
+\begin{DoxyCompactList}\small\item\em Updates the board with the player\textquotesingle{}s move. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_numerical_tic_board_aedd35037b480a429b65d0a29994b6a0f}{is\+\_\+win}} (\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Checks if the given player has won. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_numerical_tic_board_a839fd636e1424b2f8851ede5293e2067}{is\+\_\+lose}} (\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Checks if the given player has lost. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_numerical_tic_board_a2462ddaa86b0024091f069dcbb687a5f}{is\+\_\+draw}} (\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Checks if the game has ended in a draw. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_numerical_tic_board_ac52ee06a307e589e68432085a9c70a4b}{game\+\_\+is\+\_\+over}} (\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Determines whether the game is over. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_board}{Board$<$ int $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Board} (int \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}, int \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})
+\begin{DoxyCompactList}\small\item\em Construct a board with given dimensions. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Board} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. Frees allocated board memory. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ int $>$ $>$ {\bfseries get\+\_\+board\+\_\+matrix} () const
+\begin{DoxyCompactList}\small\item\em Return a copy of the current board as a 2D vector. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+rows} () const
+\begin{DoxyCompactList}\small\item\em Get number of rows. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+columns} () const
+\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+n\+\_\+moves} () const
+\begin{DoxyCompactList}\small\item\em Get number of moves. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+cell} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Return content of cell x, y in current board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_board}{Board$<$ int $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries rows}
+\begin{DoxyCompactList}\small\item\em Number of rows. \end{DoxyCompactList}\item 
+int {\bfseries columns}
+\begin{DoxyCompactList}\small\item\em Number of columns. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ int $>$ $>$ {\bfseries board}
+\begin{DoxyCompactList}\small\item\em 2D vector for the board \end{DoxyCompactList}\item 
+int {\bfseries n\+\_\+moves}
+\begin{DoxyCompactList}\small\item\em Number of moves made. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Logic handler for the Numerical Tic-\/\+Tac-\/\+Toe board. 
+
+This class manages\+:
+\begin{DoxyItemize}
+\item Tracking used numbers.
+\item Updating the board after valid moves.
+\item Determining win/lose/draw conditions. 
+\end{DoxyItemize}
+
+\label{doc-func-members}
+\Hypertarget{class_numerical_tic_board_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_numerical_tic_board_ac52ee06a307e589e68432085a9c70a4b}\index{NumericalTicBoard@{NumericalTicBoard}!game\_is\_over@{game\_is\_over}}
+\index{game\_is\_over@{game\_is\_over}!NumericalTicBoard@{NumericalTicBoard}}
+\doxysubsubsection{\texorpdfstring{game\_is\_over()}{game\_is\_over()}}
+{\footnotesize\ttfamily \label{class_numerical_tic_board_ac52ee06a307e589e68432085a9c70a4b} 
+bool Numerical\+Tic\+Board\+::game\+\_\+is\+\_\+over (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Determines whether the game is over. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the current player. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if win/lose/draw conditions are met. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_ae0e4575ec3cc4b6eb9f367ffb2beed13}{Board$<$ int $>$}}.
+
+\Hypertarget{class_numerical_tic_board_a2462ddaa86b0024091f069dcbb687a5f}\index{NumericalTicBoard@{NumericalTicBoard}!is\_draw@{is\_draw}}
+\index{is\_draw@{is\_draw}!NumericalTicBoard@{NumericalTicBoard}}
+\doxysubsubsection{\texorpdfstring{is\_draw()}{is\_draw()}}
+{\footnotesize\ttfamily \label{class_numerical_tic_board_a2462ddaa86b0024091f069dcbb687a5f} 
+bool Numerical\+Tic\+Board\+::is\+\_\+draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the game has ended in a draw. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player (unused but follows interface signature). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if no moves remain and no one has won. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a8dbe2a243881986f3e53b45799d377fc}{Board$<$ int $>$}}.
+
+\Hypertarget{class_numerical_tic_board_a839fd636e1424b2f8851ede5293e2067}\index{NumericalTicBoard@{NumericalTicBoard}!is\_lose@{is\_lose}}
+\index{is\_lose@{is\_lose}!NumericalTicBoard@{NumericalTicBoard}}
+\doxysubsubsection{\texorpdfstring{is\_lose()}{is\_lose()}}
+{\footnotesize\ttfamily \label{class_numerical_tic_board_a839fd636e1424b2f8851ede5293e2067} 
+bool Numerical\+Tic\+Board\+::is\+\_\+lose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the given player has lost. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the current player. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the opponent\textquotesingle{}s win condition is achieved. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a207d5f6feb77f81c51d1462f0245890d}{Board$<$ int $>$}}.
+
+\Hypertarget{class_numerical_tic_board_aedd35037b480a429b65d0a29994b6a0f}\index{NumericalTicBoard@{NumericalTicBoard}!is\_win@{is\_win}}
+\index{is\_win@{is\_win}!NumericalTicBoard@{NumericalTicBoard}}
+\doxysubsubsection{\texorpdfstring{is\_win()}{is\_win()}}
+{\footnotesize\ttfamily \label{class_numerical_tic_board_aedd35037b480a429b65d0a29994b6a0f} 
+bool Numerical\+Tic\+Board\+::is\+\_\+win (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the given player has won. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the current player. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if a winning condition is met. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_ab316fe3e79677b4617fc3d90d6c48f33}{Board$<$ int $>$}}.
+
+\Hypertarget{class_numerical_tic_board_af9276b6f666b5ad60f9d04f101eb89c3}\index{NumericalTicBoard@{NumericalTicBoard}!update\_board@{update\_board}}
+\index{update\_board@{update\_board}!NumericalTicBoard@{NumericalTicBoard}}
+\doxysubsubsection{\texorpdfstring{update\_board()}{update\_board()}}
+{\footnotesize\ttfamily \label{class_numerical_tic_board_af9276b6f666b5ad60f9d04f101eb89c3} 
+bool Numerical\+Tic\+Board\+::update\+\_\+board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_move}{Move}}$<$ int $>$ \texorpdfstring{$\ast$}{*}}]{move}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the board with the player\textquotesingle{}s move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & Pointer to the move object containing the chosen cell and value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the move is valid and applied, otherwise false. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a93d9dec601dda58b7e206ccb47633e57}{Board$<$ int $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{numerical__tic_8h}{numerical\+\_\+tic.\+h}}\item 
+numerical\+\_\+tic.\+cpp\end{DoxyCompactItemize}

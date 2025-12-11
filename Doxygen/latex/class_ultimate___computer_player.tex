@@ -1,0 +1,100 @@
+\doxysection{Ultimate\+\_\+\+Computer\+Player Class Reference}
+\hypertarget{class_ultimate___computer_player}{}\label{class_ultimate___computer_player}\index{Ultimate\_ComputerPlayer@{Ultimate\_ComputerPlayer}}
+
+
+Represents a computer player in Ultimate Tic-\/\+Tac-\/\+Toe.  
+
+
+
+
+{\ttfamily \#include $<$Ultimate.\+h$>$}
+
+Inheritance diagram for Ultimate\+\_\+\+Computer\+Player\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_ultimate___computer_player}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ultimate___computer_player_adeb21ea7ec5131e5c9c68e556c5ff558}{Ultimate\+\_\+\+Computer\+Player}} (string \mbox{\hyperlink{class_player_af0ad0d4ca8584d23a98c723cd703a4f6}{name}}, char \mbox{\hyperlink{class_player_a272d6c4dab769930d4f8074918e7708a}{symbol}})
+\begin{DoxyCompactList}\small\item\em Constructor to initialize computer player with name and symbol. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_ultimate___computer_player_a7f601799f89f9d26a456713882818d8c}{get\+\_\+ultimate\+\_\+computer\+\_\+move}} ()
+\begin{DoxyCompactList}\small\item\em Generates a move for the computer player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_player}{Player$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Player} (string n, char s, Player\+Type t)
+\begin{DoxyCompactList}\small\item\em Construct a player with name, symbol, and type. \end{DoxyCompactList}\item 
+string {\bfseries get\+\_\+name} () const
+\begin{DoxyCompactList}\small\item\em Get the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+Player\+Type {\bfseries get\+\_\+type} () const
+\begin{DoxyCompactList}\small\item\em Get player type (e.\+g., \textquotesingle{}H\textquotesingle{} or \textquotesingle{}C\textquotesingle{}). \end{DoxyCompactList}\item 
+char {\bfseries get\+\_\+symbol} () const
+\begin{DoxyCompactList}\small\item\em Get the player\textquotesingle{}s symbol. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_board}{Board}}$<$ char $>$ \texorpdfstring{$\ast$}{*} {\bfseries get\+\_\+board\+\_\+ptr} () const
+\begin{DoxyCompactList}\small\item\em Get a pointer to the game board. \end{DoxyCompactList}\item 
+void {\bfseries set\+\_\+board\+\_\+ptr} (\mbox{\hyperlink{class_board}{Board}}$<$ char $>$ \texorpdfstring{$\ast$}{*}b)
+\begin{DoxyCompactList}\small\item\em Assign the board pointer for the player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_player}{Player$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries name}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_player}{Player} name. \end{DoxyCompactList}\item 
+Player\+Type {\bfseries type}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_player}{Player} type (e.\+g., HUMAN or COMPUTER). \end{DoxyCompactList}\item 
+char {\bfseries symbol}
+\begin{DoxyCompactList}\small\item\em Player’s symbol on board. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_board}{Board}}$<$ char $>$ \texorpdfstring{$\ast$}{*} {\bfseries board\+Ptr}
+\begin{DoxyCompactList}\small\item\em Pointer to the game board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a computer player in Ultimate Tic-\/\+Tac-\/\+Toe. 
+
+\label{doc-constructors}
+\Hypertarget{class_ultimate___computer_player_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_ultimate___computer_player_adeb21ea7ec5131e5c9c68e556c5ff558}\index{Ultimate\_ComputerPlayer@{Ultimate\_ComputerPlayer}!Ultimate\_ComputerPlayer@{Ultimate\_ComputerPlayer}}
+\index{Ultimate\_ComputerPlayer@{Ultimate\_ComputerPlayer}!Ultimate\_ComputerPlayer@{Ultimate\_ComputerPlayer}}
+\doxysubsubsection{\texorpdfstring{Ultimate\_ComputerPlayer()}{Ultimate\_ComputerPlayer()}}
+{\footnotesize\ttfamily \label{class_ultimate___computer_player_adeb21ea7ec5131e5c9c68e556c5ff558} 
+Ultimate\+\_\+\+Computer\+Player\+::\+Ultimate\+\_\+\+Computer\+Player (\begin{DoxyParamCaption}\item[{string}]{name}{, }\item[{char}]{symbol}{}\end{DoxyParamCaption})}
+
+
+
+Constructor to initialize computer player with name and symbol. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{class_player}{Player}\textquotesingle{}s name \\
+\hline
+{\em symbol} & \doxylink{class_player}{Player}\textquotesingle{}s symbol (\textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{}) \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_ultimate___computer_player_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ultimate___computer_player_a7f601799f89f9d26a456713882818d8c}\index{Ultimate\_ComputerPlayer@{Ultimate\_ComputerPlayer}!get\_ultimate\_computer\_move@{get\_ultimate\_computer\_move}}
+\index{get\_ultimate\_computer\_move@{get\_ultimate\_computer\_move}!Ultimate\_ComputerPlayer@{Ultimate\_ComputerPlayer}}
+\doxysubsubsection{\texorpdfstring{get\_ultimate\_computer\_move()}{get\_ultimate\_computer\_move()}}
+{\footnotesize\ttfamily \label{class_ultimate___computer_player_a7f601799f89f9d26a456713882818d8c} 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Ultimate\+\_\+\+Computer\+Player\+::get\+\_\+ultimate\+\_\+computer\+\_\+move (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Generates a move for the computer player. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the \doxylink{class_move}{Move} object chosen by AI 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Ultimate.\+h\item 
+Ultimate.\+cpp\end{DoxyCompactItemize}

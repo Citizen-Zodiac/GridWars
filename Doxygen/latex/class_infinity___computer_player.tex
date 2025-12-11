@@ -1,0 +1,102 @@
+\doxysection{Infinity\+\_\+\+Computer\+Player Class Reference}
+\hypertarget{class_infinity___computer_player}{}\label{class_infinity___computer_player}\index{Infinity\_ComputerPlayer@{Infinity\_ComputerPlayer}}
+
+
+Represents a computer player for the Infinity game.  
+
+
+
+
+{\ttfamily \#include $<$Infinity.\+h$>$}
+
+Inheritance diagram for Infinity\+\_\+\+Computer\+Player\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_infinity___computer_player}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_infinity___computer_player_a9521629517c85a8185c3de4636a731b3}{Infinity\+\_\+\+Computer\+Player}} (string \mbox{\hyperlink{class_player_af0ad0d4ca8584d23a98c723cd703a4f6}{name}}, char \mbox{\hyperlink{class_player_a272d6c4dab769930d4f8074918e7708a}{symbol}})
+\begin{DoxyCompactList}\small\item\em Construct a computer player with a name and symbol. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_infinity___computer_player_ac85a657ec638a169344cbaeb06f04a48}{get\+\_\+infinity\+\_\+computer\+\_\+move}} ()
+\begin{DoxyCompactList}\small\item\em Determine and return the computer player\textquotesingle{}s move. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_player}{Player$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Player} (string n, char s, Player\+Type t)
+\begin{DoxyCompactList}\small\item\em Construct a player with name, symbol, and type. \end{DoxyCompactList}\item 
+string {\bfseries get\+\_\+name} () const
+\begin{DoxyCompactList}\small\item\em Get the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+Player\+Type {\bfseries get\+\_\+type} () const
+\begin{DoxyCompactList}\small\item\em Get player type (e.\+g., \textquotesingle{}H\textquotesingle{} or \textquotesingle{}C\textquotesingle{}). \end{DoxyCompactList}\item 
+char {\bfseries get\+\_\+symbol} () const
+\begin{DoxyCompactList}\small\item\em Get the player\textquotesingle{}s symbol. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_board}{Board}}$<$ char $>$ \texorpdfstring{$\ast$}{*} {\bfseries get\+\_\+board\+\_\+ptr} () const
+\begin{DoxyCompactList}\small\item\em Get a pointer to the game board. \end{DoxyCompactList}\item 
+void {\bfseries set\+\_\+board\+\_\+ptr} (\mbox{\hyperlink{class_board}{Board}}$<$ char $>$ \texorpdfstring{$\ast$}{*}b)
+\begin{DoxyCompactList}\small\item\em Assign the board pointer for the player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_player}{Player$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries name}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_player}{Player} name. \end{DoxyCompactList}\item 
+Player\+Type {\bfseries type}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_player}{Player} type (e.\+g., HUMAN or COMPUTER). \end{DoxyCompactList}\item 
+char {\bfseries symbol}
+\begin{DoxyCompactList}\small\item\em Player’s symbol on board. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_board}{Board}}$<$ char $>$ \texorpdfstring{$\ast$}{*} {\bfseries board\+Ptr}
+\begin{DoxyCompactList}\small\item\em Pointer to the game board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a computer player for the Infinity game. 
+
+Implements automatic move selection logic. 
+
+\label{doc-constructors}
+\Hypertarget{class_infinity___computer_player_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_infinity___computer_player_a9521629517c85a8185c3de4636a731b3}\index{Infinity\_ComputerPlayer@{Infinity\_ComputerPlayer}!Infinity\_ComputerPlayer@{Infinity\_ComputerPlayer}}
+\index{Infinity\_ComputerPlayer@{Infinity\_ComputerPlayer}!Infinity\_ComputerPlayer@{Infinity\_ComputerPlayer}}
+\doxysubsubsection{\texorpdfstring{Infinity\_ComputerPlayer()}{Infinity\_ComputerPlayer()}}
+{\footnotesize\ttfamily \label{class_infinity___computer_player_a9521629517c85a8185c3de4636a731b3} 
+Infinity\+\_\+\+Computer\+Player\+::\+Infinity\+\_\+\+Computer\+Player (\begin{DoxyParamCaption}\item[{string}]{name}{, }\item[{char}]{symbol}{}\end{DoxyParamCaption})}
+
+
+
+Construct a computer player with a name and symbol. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the computer player. \\
+\hline
+{\em symbol} & The symbol used by the computer player on the board. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_infinity___computer_player_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_infinity___computer_player_ac85a657ec638a169344cbaeb06f04a48}\index{Infinity\_ComputerPlayer@{Infinity\_ComputerPlayer}!get\_infinity\_computer\_move@{get\_infinity\_computer\_move}}
+\index{get\_infinity\_computer\_move@{get\_infinity\_computer\_move}!Infinity\_ComputerPlayer@{Infinity\_ComputerPlayer}}
+\doxysubsubsection{\texorpdfstring{get\_infinity\_computer\_move()}{get\_infinity\_computer\_move()}}
+{\footnotesize\ttfamily \label{class_infinity___computer_player_ac85a657ec638a169344cbaeb06f04a48} 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Infinity\+\_\+\+Computer\+Player\+::get\+\_\+infinity\+\_\+computer\+\_\+move (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Determine and return the computer player\textquotesingle{}s move. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the move chosen by the computer player. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_infinity_8h}{Infinity.\+h}}\item 
+Infinity.\+cpp\end{DoxyCompactItemize}

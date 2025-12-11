@@ -1,0 +1,83 @@
+\doxysection{obstacles\+\_\+xo.\+h}
+\hypertarget{obstacles__xo_8h_source}{}\label{obstacles__xo_8h_source}\mbox{\hyperlink{obstacles__xo_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ \_OBSTACLES\_XO\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ \_OBSTACLES\_XO\_H}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include"{}BoardGame\_Classes.h"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include<vector>}}
+\DoxyCodeLine{00017\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00021\ \textcolor{comment}{@brief\ Vectors\ to\ record\ moves\ in\ Obstacles\ game.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00023\ \textcolor{keyword}{static}\ vector<\ int>\ xV\_obs;}
+\DoxyCodeLine{00024\ \textcolor{keyword}{static}\ vector<\ int>\ yV\_obs;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00027\ \textcolor{comment}{@brief\ Record\ a\ move\ in\ Obstacles\ game.}}
+\DoxyCodeLine{00028\ \textcolor{comment}{@param\ row\ The\ row\ index\ of\ the\ move.}}
+\DoxyCodeLine{00029\ \textcolor{comment}{@param\ col\ The\ column\ index\ of\ the\ move.}}
+\DoxyCodeLine{00030\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{void}\ record\_move\_obs(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00034\ \textcolor{comment}{@brief\ Get\ the\ x-\/coordinate\ of\ a\ recorded\ move\ in\ Obstacles\ game.}}
+\DoxyCodeLine{00035\ \textcolor{comment}{@param\ index\ The\ index\ of\ the\ move\ to\ retrieve.}}
+\DoxyCodeLine{00036\ \textcolor{comment}{@return\ The\ x-\/coordinate\ of\ the\ move.}}
+\DoxyCodeLine{00037\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{int}\ get\_x\_move\_obs(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00039\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00040\ \textcolor{comment}{@brief\ Get\ the\ y-\/coordinate\ of\ a\ recorded\ move\ in\ Obstacles\ game.}}
+\DoxyCodeLine{00041\ \textcolor{comment}{@param\ index\ The\ index\ of\ the\ move\ to\ retrieve.}}
+\DoxyCodeLine{00042\ \textcolor{comment}{@return\ The\ y-\/coordinate\ of\ the\ move.}}
+\DoxyCodeLine{00043\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{int}\ get\_y\_move\_obs(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ rounds\_obstacles\ =\ 0;}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_obstacles___x_o___board_a3e336da3597cad2168744be3d3bf8294}{Obstacles\_XO\_Board}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}<char>\ \{}
+\DoxyCodeLine{00066\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{char}\ blank\_symbol\ =\ \textcolor{charliteral}{'.'};\ }
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00073\ \ \ \ \ \mbox{\hyperlink{class_obstacles___x_o___board_a3e336da3597cad2168744be3d3bf8294}{Obstacles\_XO\_Board}}();}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obstacles___x_o___board_ad836d86ed592db93ab91c3cb501976dd}{update\_board}}(\mbox{\hyperlink{class_move}{Move<char>}}*\ move)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obstacles___x_o___board_ab993b41130ba37c34226d7efb0540d42}{is\_win}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obstacles___x_o___board_a7f87e717994f688c637ef541c6556c84}{is\_lose}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obstacles___x_o___board_ae14e648dc669a4cff312944b0c188125}{is\_draw}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_obstacles___x_o___board_ae9ca99994513f38a6fb8e226e3358ffb}{game\_is\_over}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00109\ \};}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00121\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_obstacles___x_o___u_i_a64731286434936df486de87d0589cf85}{Obstacles\_XO\_UI}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}}<char>\ \{}
+\DoxyCodeLine{00122\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00126\ \ \ \ \ \mbox{\hyperlink{class_obstacles___x_o___u_i_a64731286434936df486de87d0589cf85}{Obstacles\_XO\_UI}}();}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00133\ \ \ \ \ \mbox{\hyperlink{class_move}{Move<char>}}*\ \mbox{\hyperlink{class_obstacles___x_o___u_i_af18297d29a4f2330d1bf8d64f0e6c10f}{get\_move}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00142\ \ \ \ \ \mbox{\hyperlink{class_player}{Player<char>}}*\ \mbox{\hyperlink{class_obstacles___x_o___u_i_a650593256ee4b1e924d08e90d4679e79}{create\_player}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{char}\ symbol,\ PlayerType\ type)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00145\ \textcolor{comment}{\ \ \ \ @brief\ Sets\ up\ the\ players\ for\ the\ Obstacles\ game.}}
+\DoxyCodeLine{00146\ \textcolor{comment}{\ \ \ \ @return\ An\ array\ of\ pointers\ to\ the\ created\ Player<char>\ instances.}}
+\DoxyCodeLine{00147\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00148\ \ \ \ \ \mbox{\hyperlink{class_player}{Player<char>}}**\ \mbox{\hyperlink{class_obstacles___x_o___u_i_a9e9945f4833a690fdc8744a9187200a4}{setup\_players}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00149\ \};}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ !\_OBSTACLES\_XO\_H}}
+
+\end{DoxyCode}
