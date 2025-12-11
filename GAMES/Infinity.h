@@ -2,8 +2,8 @@
 #define INFINITY_H
 
 #include "BoardGame_Classes.h"
-#include <vector>
 #include <queue>
+#include <string>
 using namespace std;
 
 
@@ -15,11 +15,10 @@ public:
 
 
 class Infinity_Board : public Board<char> {
-
 private:
-    queue<pair<int, int>> move_order; // track oldest moves
-
-    bool infinity_three_in_row(char s);
+    vector<pair<int, int>> all_moves;
+    int current_marks;
+    bool three_in_row(char s);
 
 public:
     Infinity_Board();
@@ -37,9 +36,12 @@ class Infinity_UI : public UI<char> {
 public:
     Infinity_UI();
 
+    int show_menu();
+    Player<char>** setup_players();
+
     Move<char>* get_move(Player<char>* p) override;
+
     Player<char>* create_player(string& name, char symbol, PlayerType type) override;
 };
 
 #endif
-

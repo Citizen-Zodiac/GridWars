@@ -38,9 +38,11 @@ private:
 class Diamond_UI : public UI<char> {
 public:
     Diamond_UI();
-
+    int show_menu();
+    Player<char>** setup_players();
     Move<char>* get_move(Player<char>* p) override;
     Player<char>* create_player(string& name, char symbol, PlayerType type) override;
 };
 
 #endif
+

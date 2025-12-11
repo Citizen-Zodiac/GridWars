@@ -10,7 +10,7 @@ class Ultimate_SubBoard {
 private:
     char cells[3][3];
     bool finished;
-    char winner; // 'X', 'O', or ' '
+    char winner;
 
     bool three_in_row(char s);
 
@@ -62,6 +62,9 @@ public:
 
     // Display the full 3x3 of 3x3 sub-boards
     void display_ultimate_board(Ultimate_MainBoard* board);
+
+    int show_menu();
+    Player<char>** setup_players();
 };
 
 

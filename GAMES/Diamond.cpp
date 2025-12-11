@@ -181,6 +181,55 @@ Move<char>* Diamond_UI::get_move(Player<char>* p) {
     }
 }
 
+int Diamond_UI::show_menu() {
+    int choice;
+    cout << "Choose game mode:\n";
+    cout << "1. Human vs Human\n";
+    cout << "2. Human vs Computer\n";
+    cout << "Choose: ";
+
+    while (true) {
+        if (!(cin >> choice)) {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cout << "Invalid input. Enter 1 or 2: ";
+            continue;
+        }
+        if (choice == 1 || choice == 2) break;
+        cout << "Invalid choice. Enter 1 or 2: ";
+    }
+
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    return choice;
+}
+
+Player<char>** Diamond_UI::setup_players() {
+    int choice = show_menu();
+
+    Player<char>** players = new Player<char>*[2];
+    string name1, name2;
+
+    cout << "Enter name for Player 1: ";
+    getline(cin, name1);
+    if (name1.empty()) name1 = "Player1";
+
+    players[0] = create_player(name1, 'X', PlayerType::HUMAN);
+
+    if (choice == 1) {
+        cout << "Enter name for Player 2: ";
+        getline(cin, name2);
+        if (name2.empty()) name2 = "Player2";
+        players[1] = create_player(name2, 'O', PlayerType::HUMAN);
+    }
+    else {
+        name2 = "Computer";
+        players[1] = create_player(name2, 'O', PlayerType::COMPUTER);
+    }
+
+    return players;
+}
+
+
 Player<char>* Diamond_UI::create_player(string& name, char symbol, PlayerType type) {
 
     if (type == PlayerType::COMPUTER)
