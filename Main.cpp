@@ -22,14 +22,14 @@ void show_menu() {
     cout << "3. SUS" << endl;
     cout << "4. Obstacles X-O" << endl;
     cout << "5. Misere Tic Tac Toe" << endl;
-    cout<<"6. 4x4 X-0 (4x4 Tic-Tac-Toe)"<<endl;
-    cout << "7. Word (Tic-Tac-Toe)"<<endl;
+    cout << "6. 4x4 X-0 (4x4 Tic-Tac-Toe)" << endl;
+    cout << "7. Word (Tic-Tac-Toe)" << endl;
     cout << "8. Connect Four (Tic-Tac-Toe)" << endl;
-	cout << "9. Memory X-O (Tic-Tac-Toe with Memory)" << endl;
-	cout << "10. Diamond Tic-Tac-Toe" << endl;
-	cout << "11. Infinity Tic-Tac-Toe" << endl;
-	cout << "12. Pyramid Tic-Tac-Toe" << endl;
-	cout << "13. Ultimate Tic-Tac-Toe" << endl;
+    cout << "9. Memory X-O (Tic-Tac-Toe with Memory)" << endl;
+    cout << "10. Diamond Tic-Tac-Toe" << endl;
+    cout << "11. Infinity Tic-Tac-Toe" << endl;
+    cout << "12. Pyramid Tic-Tac-Toe" << endl;
+    cout << "13. Ultimate Tic-Tac-Toe" << endl;
     cout << "0. Exit" << endl;
     cout << "Choose: ";
 }
@@ -135,7 +135,7 @@ int main() {
         else if (choice == 7) {
             Word_Board* board = new Word_Board();
             Word_UI* ui = new Word_UI();
-            
+
             Player<char>** players = ui->setup_players();
             GameManager<char> game(board, players, ui);
             game.run();
@@ -160,24 +160,24 @@ int main() {
             for (int i = 0; i < 2; ++i) delete players[i];
             delete[] players;
             delete ui;
-            
+
         }
-        else if(choice==9)
+        else if (choice == 9)
         {
             Memory_XO_Board* board = new Memory_XO_Board();
             Memory_XO_UI* ui = new Memory_XO_UI();
-         
+
             Player<char>** players = ui->setup_players();
             GameManager<char> game(board, players, ui);
             game.run();
-            
+
             // Cleanup
             delete board;
             for (int i = 0; i < 2; ++i) delete players[i];
             delete[] players;
             delete ui;
-		}
-        else if(choice==10)
+        }
+        else if (choice == 10)
         {
             Diamond_Board* board = new Diamond_Board();
             Diamond_UI* ui = new Diamond_UI();
@@ -190,7 +190,7 @@ int main() {
             delete[] players;
             delete ui;
         }
-        else if(choice==11)
+        else if (choice == 11)
         {
             Infinity_Board* board = new Infinity_Board();
             Infinity_UI* ui = new Infinity_UI();
@@ -202,8 +202,8 @@ int main() {
             for (int i = 0; i < 2; ++i) delete players[i];
             delete[] players;
             delete ui;
-		}
-        else if(choice==12)
+        }
+        else if (choice == 12)
         {
             PyramidTicTacToeBoard* board = new PyramidTicTacToeBoard();
             PyramidTicTacToeUI* ui = new PyramidTicTacToeUI();
@@ -214,23 +214,23 @@ int main() {
             delete board;
             for (int i = 0; i < 2; ++i) delete players[i];
             delete[] players;
-			delete ui;
-            }
-        else if(choice==13)
+            delete ui;
+        }
+        else if (choice == 13)
         {
             Ultimate_MainBoard* board = new Ultimate_MainBoard();
             Ultimate_UI* ui = new Ultimate_UI();
             Player<char>** players = ui->setup_players();
-			Ultimate_GameManager game(board, players, ui);
+            Ultimate_GameManager game(board, players, ui);
             game.run();
             // Cleanup
             delete board;
             for (int i = 0; i < 2; ++i) delete players[i];
             delete[] players;
-			delete ui;
-		}
+            delete ui;
+        }
 
-        else if (choice != 1 || choice != 2 || choice != 3 || choice!=4|| choice!=5||choice!=6||choice!=7|| choice!=8|| choice!=9||choice!=10 ||choice!=11 ||choice!=12 ||choice!=13 || choice != 0) {
+        else if (choice != 1 || choice != 2 || choice != 3 || choice != 4 || choice != 5 || choice != 6 || choice != 7 || choice != 8 || choice != 9 || choice != 10 || choice != 11 || choice != 12 || choice != 13 || choice != 0) {
             cout << "Invalid choice. Please try again." << endl;
         }
 

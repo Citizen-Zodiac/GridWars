@@ -24,11 +24,11 @@ bool PyramidTicTacToeBoard::isValidPosition(int row, int col) const {
     // Row 0 (top): only column 2 (center) - 1 square
     // Row 1 (middle): columns 1,2,3 - 3 squares
     // Row 2 (bottom): columns 0-4 - 5 squares
-    switch(row) {
-        case 0: return (col == 2);            // Top: only center
-        case 1: return (col >= 1 && col <= 3); // Middle: 3 squares
-        case 2: return (col >= 0 && col <= 4); // Bottom: 5 squares
-        default: return false;
+    switch (row) {
+    case 0: return (col == 2);            // Top: only center
+    case 1: return (col >= 1 && col <= 3); // Middle: 3 squares
+    case 2: return (col >= 0 && col <= 4); // Bottom: 5 squares
+    default: return false;
     }
 }
 
@@ -58,12 +58,12 @@ bool PyramidTicTacToeBoard::checkHorizontal() const {
     for (int row = 0; row < rows; row++) {
         for (int col = 0; col <= columns - 3; col++) {
             if (isValidPosition(row, col) &&
-                isValidPosition(row, col+1) &&
-                isValidPosition(row, col+2)) {
+                isValidPosition(row, col + 1) &&
+                isValidPosition(row, col + 2)) {
                 char cell = board[row][col];
                 if (cell != ' ' &&
-                    cell == board[row][col+1] &&
-                    cell == board[row][col+2]) {
+                    cell == board[row][col + 1] &&
+                    cell == board[row][col + 2]) {
                     return true;
                 }
             }
@@ -77,12 +77,12 @@ bool PyramidTicTacToeBoard::checkVertical() const {
     for (int col = 0; col < columns; col++) {
         for (int row = 0; row <= rows - 3; row++) {
             if (isValidPosition(row, col) &&
-                isValidPosition(row+1, col) &&
-                isValidPosition(row+2, col)) {
+                isValidPosition(row + 1, col) &&
+                isValidPosition(row + 2, col)) {
                 char cell = board[row][col];
                 if (cell != ' ' &&
-                    cell == board[row+1][col] &&
-                    cell == board[row+2][col]) {
+                    cell == board[row + 1][col] &&
+                    cell == board[row + 2][col]) {
                     return true;
                 }
             }
@@ -96,12 +96,12 @@ bool PyramidTicTacToeBoard::checkDiagonal() const {
     for (int row = 0; row <= rows - 3; row++) {
         for (int col = 0; col <= columns - 3; col++) {
             if (isValidPosition(row, col) &&
-                isValidPosition(row+1, col+1) &&
-                isValidPosition(row+2, col+2)) {
+                isValidPosition(row + 1, col + 1) &&
+                isValidPosition(row + 2, col + 2)) {
                 char cell = board[row][col];
                 if (cell != ' ' &&
-                    cell == board[row+1][col+1] &&
-                    cell == board[row+2][col+2]) {
+                    cell == board[row + 1][col + 1] &&
+                    cell == board[row + 2][col + 2]) {
                     return true;
                 }
             }
@@ -112,12 +112,12 @@ bool PyramidTicTacToeBoard::checkDiagonal() const {
     for (int row = 0; row <= rows - 3; row++) {
         for (int col = 2; col < columns; col++) {
             if (isValidPosition(row, col) &&
-                isValidPosition(row+1, col-1) &&
-                isValidPosition(row+2, col-2)) {
+                isValidPosition(row + 1, col - 1) &&
+                isValidPosition(row + 2, col - 2)) {
                 char cell = board[row][col];
                 if (cell != ' ' &&
-                    cell == board[row+1][col-1] &&
-                    cell == board[row+2][col-2]) {
+                    cell == board[row + 1][col - 1] &&
+                    cell == board[row + 2][col - 2]) {
                     return true;
                 }
             }
@@ -184,7 +184,8 @@ Player<char>** PyramidTicTacToeUI::setup_players() {
 
         players[0] = new Player<char>(name1, 'X', type1);
         players[1] = new Player<char>(name2, 'O', type2);
-    } else {
+    }
+    else {
         // Human vs Computer
         cout << "\n=== HUMAN vs COMPUTER ===\n";
         cout << "Enter your name: ";
@@ -210,7 +211,8 @@ Player<char>** PyramidTicTacToeUI::setup_players() {
             type2 = PlayerType::COMPUTER;
             players[0] = new Player<char>(name1, 'X', type1);
             players[1] = new Player<char>(name2, 'O', type2);
-        } else {
+        }
+        else {
             // Computer is X (goes first), Human is O
             type1 = PlayerType::COMPUTER;
             type2 = PlayerType::HUMAN;
@@ -221,7 +223,7 @@ Player<char>** PyramidTicTacToeUI::setup_players() {
 
     cout << "\nGame Setup Complete!\n";
     cout << players[0]->get_name() << " (" << players[0]->get_symbol() << ") vs "
-         << players[1]->get_name() << " (" << players[1]->get_symbol() << ")\n\n";
+        << players[1]->get_name() << " (" << players[1]->get_symbol() << ")\n\n";
 
     return players;
 }
@@ -242,7 +244,8 @@ Move<char>* PyramidTicTacToeUI::get_move(Player<char>* player) {
             cout << "Invalid! Enter row (0-2) and column (0-4): ";
             cin >> x >> y;
         }
-    } else {
+    }
+    else {
         // COMPUTER PLAYER
         cout << "\n" << player->get_name() << " (" << player->get_symbol() << ") is making a move...\n";
 
@@ -252,7 +255,8 @@ Move<char>* PyramidTicTacToeUI::get_move(Player<char>* player) {
 
         if (boardPtr) {
             matrix = boardPtr->get_board_matrix();
-        } else {
+        }
+        else {
             // Fallback: empty board
             matrix = vector<vector<char>>(3, vector<char>(5, ' '));
         }
@@ -263,14 +267,14 @@ Move<char>* PyramidTicTacToeUI::get_move(Player<char>* player) {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 5; j++) {
                 bool isValid = false;
-                switch(i) {
-                    case 0: isValid = (j == 2); break;
-                    case 1: isValid = (j >= 1 && j <= 3); break;
-                    case 2: isValid = (j >= 0 && j <= 4); break;
+                switch (i) {
+                case 0: isValid = (j == 2); break;
+                case 1: isValid = (j >= 1 && j <= 3); break;
+                case 2: isValid = (j >= 0 && j <= 4); break;
                 }
 
                 if (isValid && matrix[i][j] == ' ') {
-                    validMoves.push_back({i, j});
+                    validMoves.push_back({ i, j });
                 }
             }
         }
@@ -280,7 +284,8 @@ Move<char>* PyramidTicTacToeUI::get_move(Player<char>* player) {
             x = validMoves[idx].first;
             y = validMoves[idx].second;
             cout << player->get_name() << " chooses position (" << x << ", " << y << ")\n";
-        } else {
+        }
+        else {
             x = 0;
             y = 2;
         }
@@ -338,11 +343,11 @@ void PyramidTicTacToeUI::display_board_matrix(const vector<vector<char>>& matrix
     cout << "Current Board:\n";
     cout << "Top:              [" << (matrix[0][2] == ' ' ? ' ' : matrix[0][2]) << "]\n";
     cout << "Middle:       [" << (matrix[1][1] == ' ' ? ' ' : matrix[1][1]) << "] ["
-         << (matrix[1][2] == ' ' ? ' ' : matrix[1][2]) << "] ["
-         << (matrix[1][3] == ' ' ? ' ' : matrix[1][3]) << "]\n";
+        << (matrix[1][2] == ' ' ? ' ' : matrix[1][2]) << "] ["
+        << (matrix[1][3] == ' ' ? ' ' : matrix[1][3]) << "]\n";
     cout << "Bottom:   [" << (matrix[2][0] == ' ' ? ' ' : matrix[2][0]) << "] ["
-         << (matrix[2][1] == ' ' ? ' ' : matrix[2][1]) << "] ["
-         << (matrix[2][2] == ' ' ? ' ' : matrix[2][2]) << "] ["
-         << (matrix[2][3] == ' ' ? ' ' : matrix[2][3]) << "] ["
-         << (matrix[2][4] == ' ' ? ' ' : matrix[2][4]) << "]\n\n";
+        << (matrix[2][1] == ' ' ? ' ' : matrix[2][1]) << "] ["
+        << (matrix[2][2] == ' ' ? ' ' : matrix[2][2]) << "] ["
+        << (matrix[2][3] == ' ' ? ' ' : matrix[2][3]) << "] ["
+        << (matrix[2][4] == ' ' ? ' ' : matrix[2][4]) << "]\n\n";
 }
