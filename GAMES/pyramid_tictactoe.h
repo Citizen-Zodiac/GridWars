@@ -1,3 +1,14 @@
+/**
+ * @file pyramid_tictactoe.h
+ * @brief Header file for Pyramid Tic-Tac-Toe game classes.
+ * @author Mohamed Ibrahim
+ *
+ * This file provides:
+ * - `PyramidTicTacToeBoard`: A specialized board class for the Tic-Tac-Toe game.
+ * - `PyramidTicTacToeUI`: A user interface class tailored to This game setup and player interaction.
+ */
+
+
 #ifndef PYRAMID_TICTACTOE_H
 #define PYRAMID_TICTACTOE_H
 

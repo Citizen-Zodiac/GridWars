@@ -1,0 +1,25 @@
+var NAVTREEINDEX1 =
+{
+"memory__xo_8h.html":[1,0,5],
+"memory__xo_8h_source.html":[1,0,5],
+"numerical__tic_8h.html":[1,0,7],
+"numerical__tic_8h_source.html":[1,0,7],
+"obstacles__xo_8h.html":[1,0,8],
+"obstacles__xo_8h_source.html":[1,0,8],
+"pages.html":[],
+"pyramid__tictactoe_8h.html":[1,0,9],
+"pyramid__tictactoe_8h_source.html":[1,0,9],
+"sus_8h.html":[1,0,10],
+"sus_8h.html#a99266d93402ffa9a5cd16ac7e143f213":[1,0,10,2],
+"sus_8h_source.html":[1,0,10],
+"tic__4x4_8h.html":[1,0,11],
+"tic__4x4_8h_source.html":[1,0,11],
+"word__tic_8h.html":[1,0,13],
+"word__tic_8h.html#a505eb4c3748a52b37db91a42dc88b799":[1,0,13,4],
+"word__tic_8h.html#a60d3fa38c5180ca9dcb87a8a391fe224":[1,0,13,3],
+"word__tic_8h.html#ad1b177b00f118379dd26b91bb339d53e":[1,0,13,2],
+"word__tic_8h_source.html":[1,0,13],
+"xo__5_8h.html":[1,0,14],
+"xo__5_8h.html#ae0404450e3c07ba394db46fd10945d6a":[1,0,14,2],
+"xo__5_8h_source.html":[1,0,14]
+};

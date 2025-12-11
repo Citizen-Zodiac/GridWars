@@ -1,0 +1,96 @@
+\doxysection{xo\+\_\+5.\+h}
+\hypertarget{xo__5_8h_source}{}\label{xo__5_8h_source}\mbox{\hyperlink{xo__5_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ \_XO\_5\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ \_XO\_5\_H}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include"{}BoardGame\_Classes.h"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include<vector>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include<set>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include<utility>}}
+\DoxyCodeLine{00019\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{xo__5_8h_ae0404450e3c07ba394db46fd10945d6a}{MAX\_MOVES\_XO\_5}}\ =\ 24;}
+\DoxyCodeLine{00025\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ moves\_XO\_5\ =\ 0;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00028\ \textcolor{comment}{@brief\ Vectors\ to\ record\ moves\ in\ XO\ (5x5)\ game.}}
+\DoxyCodeLine{00029\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{static}\ vector<\ int>\ xV;}
+\DoxyCodeLine{00031\ \textcolor{keyword}{static}\ vector<\ int>\ yV;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00035\ \textcolor{comment}{@brief\ Record\ a\ move\ in\ XO\ (5x5)\ game.}}
+\DoxyCodeLine{00036\ \textcolor{comment}{@param\ row\ The\ row\ index\ of\ the\ move.}}
+\DoxyCodeLine{00037\ \textcolor{comment}{@param\ col\ The\ column\ index\ of\ the\ move.}}
+\DoxyCodeLine{00038\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{void}\ record\_move(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00042\ \textcolor{comment}{@brief\ Get\ the\ x-\/coordinate\ of\ a\ recorded\ move\ in\ XO\ (5x5)\ game.}}
+\DoxyCodeLine{00043\ \textcolor{comment}{@param\ index\ The\ index\ of\ the\ move\ to\ retrieve.}}
+\DoxyCodeLine{00044\ \textcolor{comment}{@return\ The\ x-\/coordinate\ of\ the\ move.}}
+\DoxyCodeLine{00045\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{int}\ get\_x\_move(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00047\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00048\ \textcolor{comment}{@brief\ Get\ the\ y-\/coordinate\ of\ a\ recorded\ move\ in\ XO\ (5x5)\ game.}}
+\DoxyCodeLine{00049\ \textcolor{comment}{@param\ index\ The\ index\ of\ the\ move\ to\ retrieve.}}
+\DoxyCodeLine{00050\ \textcolor{comment}{@return\ The\ y-\/coordinate\ of\ the\ move.}}
+\DoxyCodeLine{00051\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00052\ \textcolor{keywordtype}{int}\ get\_y\_move(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{static}\ set<pair<int,\ int>>\ count1\_rows;}
+\DoxyCodeLine{00060\ \textcolor{keyword}{static}\ set<pair<int,\ int>>\ count1\_columns;}
+\DoxyCodeLine{00061\ \textcolor{keyword}{static}\ set<pair<int,\ int>>\ count1\_diags;}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00066\ \textcolor{keyword}{static}\ set<pair<int,\ int>>\ count2\_rows;}
+\DoxyCodeLine{00067\ \textcolor{keyword}{static}\ set<pair<int,\ int>>\ count2\_columns;}
+\DoxyCodeLine{00068\ \textcolor{keyword}{static}\ set<pair<int,\ int>>\ count2\_diags;}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00082\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_x_o__5___board_a73570e759d64bfac9b649daba6f8f825}{XO\_5\_Board}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}<char>\ \{}
+\DoxyCodeLine{00083\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{char}\ blank\_symbol\ =\ \textcolor{charliteral}{'.'};\ }
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00090\ \ \ \ \ \mbox{\hyperlink{class_x_o__5___board_a73570e759d64bfac9b649daba6f8f825}{XO\_5\_Board}}();}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_x_o__5___board_aa2e5bf08c3b99e769ff22894401364a0}{update\_board}}(\mbox{\hyperlink{class_move}{Move<char>}}*\ move)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_x_o__5___board_af415c590baa2758ae8ce13c5a20dd0fe}{is\_win}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_x_o__5___board_a57268c8128e55d0ba1f021f9a5c16e86}{is\_lose}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_x_o__5___board_aae4fce82029cf199aa65cfab8fc92bb5}{is\_draw}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_x_o__5___board_aa43e8cc89bcb78b4ae1a77770f38aeeb}{game\_is\_over}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00126\ \};}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00138\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_x_o__5___u_i_a47aa11d625ecdc959f0746d8ac12f63d}{XO\_5\_UI}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}}<char>\ \{}
+\DoxyCodeLine{00139\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00143\ \ \ \ \ \mbox{\hyperlink{class_x_o__5___u_i_a47aa11d625ecdc959f0746d8ac12f63d}{XO\_5\_UI}}();}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00150\ \ \ \ \ \mbox{\hyperlink{class_move}{Move<char>}}*\ \mbox{\hyperlink{class_x_o__5___u_i_a955e3adb25f923fb557cdd98e21f0d98}{get\_move}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00159\ \ \ \ \ \mbox{\hyperlink{class_player}{Player<char>}}*\ \mbox{\hyperlink{class_x_o__5___u_i_a0e2a7939196ff24c071c2feaa8756faa}{create\_player}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{char}\ symbol,\ PlayerType\ type)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00162\ \textcolor{comment}{\ \ \ \ @brief\ Sets\ up\ the\ players\ for\ the\ XO\ (5x5)\ game.}}
+\DoxyCodeLine{00163\ \textcolor{comment}{\ \ \ \ @return\ An\ array\ of\ pointers\ to\ the\ created\ Player<char>\ instances.}}
+\DoxyCodeLine{00164\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00165\ \ \ \ \ \mbox{\hyperlink{class_player}{Player<char>}}**\ \mbox{\hyperlink{class_x_o__5___u_i_ae6fbbf8ebab703d5ca946c85ae8b7ecc}{setup\_players}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00166\ \};}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,7 @@
+var searchData=
+[
+  ['cell_5fwidth_0',['cell_width',['../class_u_i.html#a6c79c489ae9aa3a7860fb58e5a14ddfe',1,'UI']]],
+  ['columns_1',['columns',['../class_board.html#afaf8842d9d52ac724e8c2f5642ecafc7',1,'Board']]],
+  ['connect_5ffour_2eh_2',['connect_four.h',['../connect__four_8h.html',1,'']]],
+  ['create_5fplayer_3',['create_player',['../class_u_i.html#a94561e0bb4bbcbe5ff71ca6d751922df',1,'UI::create_player()'],['../class_four___u_i.html#a20cd8a399f41c9288de2a8e91b4e3072',1,'Four_UI::create_player()'],['../class_diamond___u_i.html#a3edaa217ff84fc5b8ff2233d17aa831a',1,'Diamond_UI::create_player()'],['../class_infinity___u_i.html#a53a5386f88fc799512023584a0cef274',1,'Infinity_UI::create_player()'],['../class_memory___x_o___u_i.html#a6a84a27face2fff6f7f4f23da3b7f254',1,'Memory_XO_UI::create_player()'],['../class_misere_u_i.html#a2f9fb2fe8ead5ac8c4376a4ce3fc88d4',1,'MisereUI::create_player()'],['../class_numerical_tic_u_i.html#a4e6e7da69d420e2f7eed7c132ef02297',1,'NumericalTicUI::create_player()'],['../class_obstacles___x_o___u_i.html#a650593256ee4b1e924d08e90d4679e79',1,'Obstacles_XO_UI::create_player()'],['../class_s_u_s___u_i.html#ae510c6c91efc4a17d7dadb4282e00e84',1,'SUS_UI::create_player()'],['../class_ultimate___u_i.html#a8b7c8b09278cdef5dc878ef89eaa83e7',1,'Ultimate_UI::create_player()'],['../class_word___u_i.html#adf7b7a1e67e1f5fae7dbae6a44aaafc1',1,'Word_UI::create_player()'],['../class_x_o__5___u_i.html#a0e2a7939196ff24c071c2feaa8756faa',1,'XO_5_UI::create_player()']]]
+];

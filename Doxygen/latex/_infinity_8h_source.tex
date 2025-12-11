@@ -1,0 +1,60 @@
+\doxysection{Infinity.\+h}
+\hypertarget{_infinity_8h_source}{}\label{_infinity_8h_source}\mbox{\hyperlink{_infinity_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ INFINITY\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ INFINITY\_H}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}BoardGame\_Classes.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{00016\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_infinity___computer_player_a9521629517c85a8185c3de4636a731b3}{Infinity\_ComputerPlayer}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_player_adb4e803a7ac0356b111b8ca79d766976}{Player}}<char>\ \{}
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_infinity___computer_player_a9521629517c85a8185c3de4636a731b3}{Infinity\_ComputerPlayer}}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_player_af0ad0d4ca8584d23a98c723cd703a4f6}{name}},\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_player_a272d6c4dab769930d4f8074918e7708a}{symbol}});}
+\DoxyCodeLine{00032\ \ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_move}{Move<char>}}*\ \mbox{\hyperlink{class_infinity___computer_player_ac85a657ec638a169344cbaeb06f04a48}{get\_infinity\_computer\_move}}();}
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_infinity___board_a70c26a8f29d4d3ba36e948e7b2400a5d}{Infinity\_Board}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}<char>\ \{}
+\DoxyCodeLine{00048\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00052\ \ \ \ \ vector<pair<int,\ int>>\ all\_moves;}
+\DoxyCodeLine{00053\ \ \ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{int}\ current\_marks;}
+\DoxyCodeLine{00058\ \ \ \ \ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{bool}\ three\_in\_row(\textcolor{keywordtype}{char}\ s);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{class_infinity___board_a70c26a8f29d4d3ba36e948e7b2400a5d}{Infinity\_Board}}();}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_infinity___board_a73168748decfd8a3bfa9044409d728aa}{update\_board}}(\mbox{\hyperlink{class_move}{Move<char>}}*\ move)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_infinity___board_a3d7bfd3c82d1997c6749d11923ff26bb}{is\_win}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ p)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00085\ \ \ \ \ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_infinity___board_a01a4beee9bc39dacca3090f1829e5ded}{is\_lose}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ p)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00093\ \ \ \ \ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_infinity___board_a6ea4d1ab2f743c678d19b886d8ac6351}{is\_draw}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ p)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_infinity___board_a06f63830918dcdef1c246bc98d7156e3}{game\_is\_over}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ p)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00107\ \};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00116\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_infinity___u_i_a6c620d22e9f05bd83793f145a4cdd73f}{Infinity\_UI}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}}<char>\ \{}
+\DoxyCodeLine{00117\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00121\ \ \ \ \ \mbox{\hyperlink{class_infinity___u_i_a6c620d22e9f05bd83793f145a4cdd73f}{Infinity\_UI}}();}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_infinity___u_i_a8447adcb057697562591d8338545cf49}{show\_menu}}();}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00133\ \ \ \ \ \mbox{\hyperlink{class_player}{Player<char>}}**\ \mbox{\hyperlink{class_infinity___u_i_a4f5a54e76d90101763cbea317c1f33f9}{setup\_players}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00140\ \ \ \ \ \mbox{\hyperlink{class_move}{Move<char>}}*\ \mbox{\hyperlink{class_infinity___u_i_a82a9d554545666cf002bdebaa21d731a}{get\_move}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ p)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00149\ \ \ \ \ \mbox{\hyperlink{class_player}{Player<char>}}*\ \mbox{\hyperlink{class_infinity___u_i_a53a5386f88fc799512023584a0cef274}{create\_player}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{char}\ symbol,\ PlayerType\ type)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00150\ \};}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

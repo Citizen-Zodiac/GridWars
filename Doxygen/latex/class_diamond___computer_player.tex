@@ -1,0 +1,103 @@
+\doxysection{Diamond\+\_\+\+Computer\+Player Class Reference}
+\hypertarget{class_diamond___computer_player}{}\label{class_diamond___computer_player}\index{Diamond\_ComputerPlayer@{Diamond\_ComputerPlayer}}
+
+
+Computer player class for the Diamond game.  
+
+
+
+
+{\ttfamily \#include $<$Diamond.\+h$>$}
+
+Inheritance diagram for Diamond\+\_\+\+Computer\+Player\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_diamond___computer_player}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_diamond___computer_player_aa91d456a1c7f9bef263175bc248c03f0}{Diamond\+\_\+\+Computer\+Player}} (string \mbox{\hyperlink{class_player_af0ad0d4ca8584d23a98c723cd703a4f6}{name}}, char \mbox{\hyperlink{class_player_a272d6c4dab769930d4f8074918e7708a}{symbol}})
+\begin{DoxyCompactList}\small\item\em Construct a Diamond computer player with name and symbol. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_diamond___computer_player_a34c5a278dd527cd9779ee810a2f4a7a6}{get\+\_\+diamond\+\_\+computer\+\_\+move}} ()
+\begin{DoxyCompactList}\small\item\em Generate a move for the computer player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_player}{Player$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Player} (string n, char s, Player\+Type t)
+\begin{DoxyCompactList}\small\item\em Construct a player with name, symbol, and type. \end{DoxyCompactList}\item 
+string {\bfseries get\+\_\+name} () const
+\begin{DoxyCompactList}\small\item\em Get the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+Player\+Type {\bfseries get\+\_\+type} () const
+\begin{DoxyCompactList}\small\item\em Get player type (e.\+g., \textquotesingle{}H\textquotesingle{} or \textquotesingle{}C\textquotesingle{}). \end{DoxyCompactList}\item 
+char {\bfseries get\+\_\+symbol} () const
+\begin{DoxyCompactList}\small\item\em Get the player\textquotesingle{}s symbol. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_board}{Board}}$<$ char $>$ \texorpdfstring{$\ast$}{*} {\bfseries get\+\_\+board\+\_\+ptr} () const
+\begin{DoxyCompactList}\small\item\em Get a pointer to the game board. \end{DoxyCompactList}\item 
+void {\bfseries set\+\_\+board\+\_\+ptr} (\mbox{\hyperlink{class_board}{Board}}$<$ char $>$ \texorpdfstring{$\ast$}{*}b)
+\begin{DoxyCompactList}\small\item\em Assign the board pointer for the player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_player}{Player$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries name}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_player}{Player} name. \end{DoxyCompactList}\item 
+Player\+Type {\bfseries type}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_player}{Player} type (e.\+g., HUMAN or COMPUTER). \end{DoxyCompactList}\item 
+char {\bfseries symbol}
+\begin{DoxyCompactList}\small\item\em Player’s symbol on board. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_board}{Board}}$<$ char $>$ \texorpdfstring{$\ast$}{*} {\bfseries board\+Ptr}
+\begin{DoxyCompactList}\small\item\em Pointer to the game board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Computer player class for the Diamond game. 
+
+\label{doc-constructors}
+\Hypertarget{class_diamond___computer_player_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_diamond___computer_player_aa91d456a1c7f9bef263175bc248c03f0}\index{Diamond\_ComputerPlayer@{Diamond\_ComputerPlayer}!Diamond\_ComputerPlayer@{Diamond\_ComputerPlayer}}
+\index{Diamond\_ComputerPlayer@{Diamond\_ComputerPlayer}!Diamond\_ComputerPlayer@{Diamond\_ComputerPlayer}}
+\doxysubsubsection{\texorpdfstring{Diamond\_ComputerPlayer()}{Diamond\_ComputerPlayer()}}
+{\footnotesize\ttfamily \label{class_diamond___computer_player_aa91d456a1c7f9bef263175bc248c03f0} 
+Diamond\+\_\+\+Computer\+Player\+::\+Diamond\+\_\+\+Computer\+Player (\begin{DoxyParamCaption}\item[{string}]{name}{, }\item[{char}]{symbol}{}\end{DoxyParamCaption})}
+
+
+
+Construct a Diamond computer player with name and symbol. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the computer player. \\
+\hline
+{\em symbol} & The symbol used by the computer player on the board. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the move chosen by the computer player. 
+\end{DoxyReturn}
+
+
+\label{doc-func-members}
+\Hypertarget{class_diamond___computer_player_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_diamond___computer_player_a34c5a278dd527cd9779ee810a2f4a7a6}\index{Diamond\_ComputerPlayer@{Diamond\_ComputerPlayer}!get\_diamond\_computer\_move@{get\_diamond\_computer\_move}}
+\index{get\_diamond\_computer\_move@{get\_diamond\_computer\_move}!Diamond\_ComputerPlayer@{Diamond\_ComputerPlayer}}
+\doxysubsubsection{\texorpdfstring{get\_diamond\_computer\_move()}{get\_diamond\_computer\_move()}}
+{\footnotesize\ttfamily \label{class_diamond___computer_player_a34c5a278dd527cd9779ee810a2f4a7a6} 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Diamond\+\_\+\+Computer\+Player\+::get\+\_\+diamond\+\_\+computer\+\_\+move (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Generate a move for the computer player. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the \doxylink{class_move}{Move$<$char$>$} object representing the computer\textquotesingle{}s move. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_diamond_8h}{Diamond.\+h}}\item 
+Diamond.\+cpp\end{DoxyCompactItemize}

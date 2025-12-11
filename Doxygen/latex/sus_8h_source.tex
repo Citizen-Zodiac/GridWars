@@ -1,0 +1,96 @@
+\doxysection{sus.\+h}
+\hypertarget{sus_8h_source}{}\label{sus_8h_source}\mbox{\hyperlink{sus_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ \_SUS\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ \_SUS\_H}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include"{}BoardGame\_Classes.h"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include<vector>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include<set>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include<utility>}}
+\DoxyCodeLine{00019\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{sus_8h_a99266d93402ffa9a5cd16ac7e143f213}{MAX\_MOVES\_SUS}}\ =\ 9;}
+\DoxyCodeLine{00025\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ moves\_sus\ =\ 0;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00028\ \textcolor{comment}{@brief\ Vectors\ to\ record\ moves\ in\ SUS\ game.}}
+\DoxyCodeLine{00029\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{static}\ vector<\ int>\ xVs;}
+\DoxyCodeLine{00031\ \textcolor{keyword}{static}\ vector<\ int>\ yVs;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00035\ \textcolor{comment}{@brief\ Record\ a\ move\ in\ SUS\ game.}}
+\DoxyCodeLine{00036\ \textcolor{comment}{@param\ row\ The\ row\ index\ of\ the\ move.}}
+\DoxyCodeLine{00037\ \textcolor{comment}{@param\ col\ The\ column\ index\ of\ the\ move.}}
+\DoxyCodeLine{00038\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{void}\ record\_move\_sus(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00042\ \textcolor{comment}{@brief\ Get\ the\ x-\/coordinate\ of\ a\ recorded\ move\ in\ SUS\ game.}}
+\DoxyCodeLine{00043\ \textcolor{comment}{@param\ index\ The\ index\ of\ the\ move\ to\ retrieve.}}
+\DoxyCodeLine{00044\ \textcolor{comment}{@return\ The\ x-\/coordinate\ of\ the\ move.}}
+\DoxyCodeLine{00045\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{int}\ get\_x\_move\_sus(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00047\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00048\ \textcolor{comment}{@brief\ Get\ the\ y-\/coordinate\ of\ a\ recorded\ move\ in\ SUS\ game.}}
+\DoxyCodeLine{00049\ \textcolor{comment}{@param\ index\ The\ index\ of\ the\ move\ to\ retrieve.}}
+\DoxyCodeLine{00050\ \textcolor{comment}{@return\ The\ y-\/coordinate\ of\ the\ move.}}
+\DoxyCodeLine{00051\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00052\ \textcolor{keywordtype}{int}\ get\_y\_move\_sus(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{static}\ set<pair<int,\ int>>\ count1\_rows\_sus;}
+\DoxyCodeLine{00060\ \textcolor{keyword}{static}\ set<pair<int,\ int>>\ count1\_columns\_sus;}
+\DoxyCodeLine{00061\ \textcolor{keyword}{static}\ set<pair<int,\ int>>\ count1\_diags\_sus;}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00066\ \textcolor{keyword}{static}\ set<pair<int,\ int>>\ count2\_rows\_sus;}
+\DoxyCodeLine{00067\ \textcolor{keyword}{static}\ set<pair<int,\ int>>\ count2\_columns\_sus;}
+\DoxyCodeLine{00068\ \textcolor{keyword}{static}\ set<pair<int,\ int>>\ count2\_diags\_sus;}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00081\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_s_u_s___board_a653be0dfe8070a59361bd228c0b54f71}{SUS\_Board}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}<char>\ \{}
+\DoxyCodeLine{00082\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{char}\ blank\_symbol\ =\ \textcolor{charliteral}{'.'};\ }
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00089\ \ \ \ \ \mbox{\hyperlink{class_s_u_s___board_a653be0dfe8070a59361bd228c0b54f71}{SUS\_Board}}();}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_s_u_s___board_a22679cdc9a91a17fea898c66ad821e45}{update\_board}}(\mbox{\hyperlink{class_move}{Move<char>}}*\ move)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_s_u_s___board_a2230a0e70a119a14e7e7380ba9b2cb90}{is\_win}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_s_u_s___board_a3761b3ce05e2194ff95893b494a3c933}{is\_lose}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_s_u_s___board_aeb2ad5ce9bdd10ecf2d3cf06be14e6ca}{is\_draw}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_s_u_s___board_acd2c39612239065da3aea67ac7c27aa4}{game\_is\_over}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00125\ \};}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_s_u_s___u_i_ac1a13d00ecf04b1ea3af53f1c08949c1}{SUS\_UI}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}}<char>\ \{}
+\DoxyCodeLine{00139\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00143\ \ \ \ \ \mbox{\hyperlink{class_s_u_s___u_i_ac1a13d00ecf04b1ea3af53f1c08949c1}{SUS\_UI}}();}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00150\ \ \ \ \ \mbox{\hyperlink{class_move}{Move<char>}}*\ \mbox{\hyperlink{class_s_u_s___u_i_a9c7a3c09a5e18a3d89f448ea93b6dea6}{get\_move}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00159\ \ \ \ \ \mbox{\hyperlink{class_player}{Player<char>}}*\ \mbox{\hyperlink{class_s_u_s___u_i_ae510c6c91efc4a17d7dadb4282e00e84}{create\_player}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{char}\ symbol,\ PlayerType\ type)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00162\ \textcolor{comment}{\ \ \ \ @brief\ Sets\ up\ the\ players\ for\ the\ SUS\ game.}}
+\DoxyCodeLine{00163\ \textcolor{comment}{\ \ \ \ @return\ An\ array\ of\ pointers\ to\ the\ created\ Player<char>\ instances.}}
+\DoxyCodeLine{00164\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00165\ \ \ \ \ \mbox{\hyperlink{class_player}{Player<char>}}**\ \mbox{\hyperlink{class_s_u_s___u_i_a24c1d67ea76050e7bee6159e9ba39aa2}{setup\_players}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00166\ \};}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

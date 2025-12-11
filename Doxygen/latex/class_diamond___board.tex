@@ -1,0 +1,193 @@
+\doxysection{Diamond\+\_\+\+Board Class Reference}
+\hypertarget{class_diamond___board}{}\label{class_diamond___board}\index{Diamond\_Board@{Diamond\_Board}}
+
+
+Specialized board class for the Diamond game.  
+
+
+
+
+{\ttfamily \#include $<$Diamond.\+h$>$}
+
+Inheritance diagram for Diamond\+\_\+\+Board\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_diamond___board}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_diamond___board_a46b141be4a62a22373d34ef04c9c536a}\label{class_diamond___board_a46b141be4a62a22373d34ef04c9c536a} 
+{\bfseries Diamond\+\_\+\+Board} ()
+\begin{DoxyCompactList}\small\item\em Construct a Diamond board with predefined dimensions. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_diamond___board_ace093fe213c029551400df9cc4d53196}{update\+\_\+board}} (\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}move) override
+\begin{DoxyCompactList}\small\item\em Update the board with a new move. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_diamond___board_af16163178ffecf9ac513d1d3cdca2e06}{is\+\_\+win}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}p) override
+\begin{DoxyCompactList}\small\item\em Checks if the given player has won the game. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_diamond___board_a78f12c3ba0584f8774413ed5a9130f5f}{is\+\_\+lose}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}p) override
+\begin{DoxyCompactList}\small\item\em Checks if the given player has lost the game. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_diamond___board_ae17dc8798dc1981bede1dc0789710693}{is\+\_\+draw}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}p) override
+\begin{DoxyCompactList}\small\item\em Checks if the game ended in a draw. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_diamond___board_a746d970c4f9fc0c79037b68741211b85}{game\+\_\+is\+\_\+over}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}p) override
+\begin{DoxyCompactList}\small\item\em Checks if the game is over for the given player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Board} (int \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}, int \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})
+\begin{DoxyCompactList}\small\item\em Construct a board with given dimensions. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Board} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. Frees allocated board memory. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ {\bfseries get\+\_\+board\+\_\+matrix} () const
+\begin{DoxyCompactList}\small\item\em Return a copy of the current board as a 2D vector. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+rows} () const
+\begin{DoxyCompactList}\small\item\em Get number of rows. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+columns} () const
+\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\item 
+int {\bfseries get\+\_\+n\+\_\+moves} () const
+\begin{DoxyCompactList}\small\item\em Get number of moves. \end{DoxyCompactList}\item 
+char {\bfseries get\+\_\+cell} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Return content of cell x, y in current board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries rows}
+\begin{DoxyCompactList}\small\item\em Number of rows. \end{DoxyCompactList}\item 
+int {\bfseries columns}
+\begin{DoxyCompactList}\small\item\em Number of columns. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ {\bfseries board}
+\begin{DoxyCompactList}\small\item\em 2D vector for the board \end{DoxyCompactList}\item 
+int {\bfseries n\+\_\+moves}
+\begin{DoxyCompactList}\small\item\em Number of moves made. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Specialized board class for the Diamond game. 
+
+This class inherits from the generic {\ttfamily \doxylink{class_board}{Board}\texorpdfstring{$<$}{<}char\texorpdfstring{$>$}{>}} class and implements the specific logic required for Diamond, including move updates and win/loss/draw conditions.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_board}{Board} 
+\end{DoxySeeAlso}
+
+
+\label{doc-func-members}
+\Hypertarget{class_diamond___board_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_diamond___board_a746d970c4f9fc0c79037b68741211b85}\index{Diamond\_Board@{Diamond\_Board}!game\_is\_over@{game\_is\_over}}
+\index{game\_is\_over@{game\_is\_over}!Diamond\_Board@{Diamond\_Board}}
+\doxysubsubsection{\texorpdfstring{game\_is\_over()}{game\_is\_over()}}
+{\footnotesize\ttfamily \label{class_diamond___board_a746d970c4f9fc0c79037b68741211b85} 
+bool Diamond\+\_\+\+Board\+::game\+\_\+is\+\_\+over (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{p}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the game is over for the given player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Pointer to the player being checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the game is over, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_ae0e4575ec3cc4b6eb9f367ffb2beed13}{Board$<$ char $>$}}.
+
+\Hypertarget{class_diamond___board_ae17dc8798dc1981bede1dc0789710693}\index{Diamond\_Board@{Diamond\_Board}!is\_draw@{is\_draw}}
+\index{is\_draw@{is\_draw}!Diamond\_Board@{Diamond\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_draw()}{is\_draw()}}
+{\footnotesize\ttfamily \label{class_diamond___board_ae17dc8798dc1981bede1dc0789710693} 
+bool Diamond\+\_\+\+Board\+::is\+\_\+draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{p}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the game ended in a draw. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Pointer to the player being checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the game is a draw, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a8dbe2a243881986f3e53b45799d377fc}{Board$<$ char $>$}}.
+
+\Hypertarget{class_diamond___board_a78f12c3ba0584f8774413ed5a9130f5f}\index{Diamond\_Board@{Diamond\_Board}!is\_lose@{is\_lose}}
+\index{is\_lose@{is\_lose}!Diamond\_Board@{Diamond\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_lose()}{is\_lose()}}
+{\footnotesize\ttfamily \label{class_diamond___board_a78f12c3ba0584f8774413ed5a9130f5f} 
+bool Diamond\+\_\+\+Board\+::is\+\_\+lose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{p}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the given player has lost the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Pointer to the player being checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns false as losing is not explicitly tracked in Diamond. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a207d5f6feb77f81c51d1462f0245890d}{Board$<$ char $>$}}.
+
+\Hypertarget{class_diamond___board_af16163178ffecf9ac513d1d3cdca2e06}\index{Diamond\_Board@{Diamond\_Board}!is\_win@{is\_win}}
+\index{is\_win@{is\_win}!Diamond\_Board@{Diamond\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_win()}{is\_win()}}
+{\footnotesize\ttfamily \label{class_diamond___board_af16163178ffecf9ac513d1d3cdca2e06} 
+bool Diamond\+\_\+\+Board\+::is\+\_\+win (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{p}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the given player has won the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player being checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the player has a winning line, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_ab316fe3e79677b4617fc3d90d6c48f33}{Board$<$ char $>$}}.
+
+\Hypertarget{class_diamond___board_ace093fe213c029551400df9cc4d53196}\index{Diamond\_Board@{Diamond\_Board}!update\_board@{update\_board}}
+\index{update\_board@{update\_board}!Diamond\_Board@{Diamond\_Board}}
+\doxysubsubsection{\texorpdfstring{update\_board()}{update\_board()}}
+{\footnotesize\ttfamily \label{class_diamond___board_ace093fe213c029551400df9cc4d53196} 
+bool Diamond\+\_\+\+Board\+::update\+\_\+board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{move}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Update the board with a new move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & The move object containing position and symbol. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the move is valid and applied, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a93d9dec601dda58b7e206ccb47633e57}{Board$<$ char $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_diamond_8h}{Diamond.\+h}}\item 
+Diamond.\+cpp\end{DoxyCompactItemize}
